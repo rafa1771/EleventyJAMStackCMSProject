@@ -1,0 +1,21 @@
+{
+  "name": "eleventyjamstackcms",
+  "version": "1.0.0",
+  "description": "This is an open source project from [DevProjects](http://www.codementor.io/projects). Feedback and questions are welcome! Find the project requirements here: [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb)",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafa1771/EleventyJAMStackCMSProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
