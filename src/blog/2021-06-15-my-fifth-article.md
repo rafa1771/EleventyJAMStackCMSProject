@@ -1,19 +1,13 @@
 ---
-title: My Fifth Article
-author: Kevin Powell
-date: 2021-06-15
+title: The Perils of Overconfidence in Elevator Etiquette
+author: Vizt Nivlir
+date: 2024-06-15
 tags: ["post", "featured"]
-image: /assets/blog/article-5.jpg
-imageAlt: This is a test
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
+image: /assets/blog/vizt_in_the_elevator.jpg
+imageAlt: Vizt Nivlir in an elevator
+description: Few things are more revealing of one’s character than how they handle the unspoken rules of an elevator ride. Vizt Nivlir reflects on the delicate art of standing still and looking indifferent.
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id leo in vitae turpis massa. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Ornare aenean euismod elementum nisi quis eleifend. Amet tellus cras adipiscing enim eu turpis. Nisi vitae suscipit tellus mauris. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Mi eget mauris pharetra et. Et tortor at risus viverra. Id eu nisl nunc mi ipsum faucibus vitae. Malesuada nunc vel risus commodo viverra maecenas. Et netus et malesuada fames ac turpis egestas sed. Massa vitae tortor condimentum lacinia quis. Eu augue ut lectus arcu bibendum at varius. Enim nec dui nunc mattis enim ut tellus elementum sagittis. In fermentum et sollicitudin ac orci. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Id porta nibh venenatis cras sed felis eget velit. In hac habitasse platea dictumst.
+Elevators are, at their core, an experiment in controlled awkwardness. A group of individuals, herded into a confined space, each pretending that the others do not exist. The only acceptable behaviors include staring at the door, pretending to check one’s phone, or subtly recalculating the physics of personal space.
 
-Amet est placerat in egestas erat imperdiet sed euismod. Elementum pulvinar etiam non quam. Pharetra convallis posuere morbi leo urna molestie. Varius duis at consectetur lorem donec massa. Id semper risus in hendrerit gravida rutrum quisque. Adipiscing elit pellentesque habitant morbi tristique senectus. Tortor pretium viverra suspendisse potenti. Aenean et tortor at risus viverra adipiscing at in. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Eu augue ut lectus arcu bibendum at varius vel pharetra. Facilisis magna etiam tempor orci eu. Habitant morbi tristique senectus et. Eu facilisis sed odio morbi quis commodo. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit. Nulla posuere sollicitudin aliquam ultrices sagittis. At imperdiet dui accumsan sit amet nulla. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Tortor id aliquet lectus proin nibh. Tellus at urna condimentum mattis.
-
-Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Accumsan tortor posuere ac ut consequat. Suspendisse sed nisi lacus sed viverra tellus. Amet nulla facilisi morbi tempus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Maecenas accumsan lacus vel facilisis volutpat. Fringilla phasellus faucibus scelerisque eleifend. Enim neque volutpat ac tincidunt vitae semper quis. Id eu nisl nunc mi ipsum. Ligula ullamcorper malesuada proin libero nunc. Bibendum at varius vel pharetra vel turpis nunc eget.
-
-Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Convallis a cras semper auctor. Congue eu consequat ac felis donec et odio. Maecenas ultricies mi eget mauris pharetra. Vel facilisis volutpat est velit egestas dui id ornare. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Lectus nulla at volutpat diam ut venenatis tellus in. Pellentesque massa placerat duis ultricies. Augue eget arcu dictum varius duis at consectetur lorem.
-
-Felis donec et odio pellentesque diam volutpat commodo. Donec massa sapien faucibus et. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. A diam sollicitudin tempor id eu nisl. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Cursus turpis massa tincidunt dui. Luctus accumsan tortor posuere ac ut consequat semper viverra. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Leo vel fringilla est ullamcorper. Auctor elit sed vulputate mi sit amet mauris. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis.
+Yet, overconfidence in one’s elevator etiquette can be disastrous. Pressing the “close door” button with too much vigor makes one appear authoritarian; pressing it too little suggests passivity. Standing too close? A crime. Too far? Suspicious. As a gazelle of grace and composure, I often take a leadership role in this delicate ballet. But even I am not immune to disaster. Just last week, I nodded at another passenger—a grievous breach of protocol. They nodded back. We were trapped in an escalating spiral of mutual acknowledgment. I will never recover.

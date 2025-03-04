@@ -1,15 +1,18 @@
 # DevProjects - Create a fast and secure blog using JAMStack
 
+This blog was built by following a tutorial by [Kevin Powell](https://www.kevinpowell.co/) on his YouTube channel and using resources from his tutorial on [DevProjects](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb).  
 This is an open source project from [DevProjects](http://www.codementor.io/projects). Feedback and questions are welcome!
 Find the project requirements here: [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb)
 
 ## Tech/framework used
 
-Built with \_\_\_
+- **Static Site Generator**: Eleventy
+- **Hosting & Deployment**: Netlify
+- **CMS**: [Decap](https://decapcms.org/)
 
 ## Screenshots and demo
 
-Screenshots of your app and/or a link to your live demo
+[Live Demo on Netlify](https://eleventyjamstackproject.netlify.app/)
 
 ## Installation
 
