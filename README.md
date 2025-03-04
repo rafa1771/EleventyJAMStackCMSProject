@@ -7,6 +7,7 @@ Find the project requirements here: [Create a fast and secure blog using JAMStac
 ## Tech/framework used
 
 - **Static Site Generator**: Eleventy
+- **Templating Languages**: Nunjucks, Liquid
 - **Hosting & Deployment**: Netlify
 - **CMS**: [Decap](https://decapcms.org/)
 
