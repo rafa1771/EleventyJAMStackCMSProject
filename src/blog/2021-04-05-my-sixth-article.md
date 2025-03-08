@@ -1,11 +1,13 @@
 ---
 title: The Social Contract of Holding the Door for Strangers
+description: At what distance is a person too far away for you to hold the door?
+  Vizt Nivlir examines one of the great ethical dilemmas of modern life.
 author: Vizt Nivlir
 date: 2024-06-15
-tags: ["post"]
+tags:
+  - post
 image: /assets/blog/vizt_holding_the_door_open.jpg
-imageAlt: Vizt Nivlir holding a glass door open for a human who was absurdly far away. The human was awkwardly committed to speeding up. The gazelle stands tall, elegant, but internally questioning his life choices.
-description: At what distance is a person too far away for you to hold the door? Vizt Nivlir examines one of the great ethical dilemmas of modern life.
+imageAlt: Vizt Nivlir is always a gentlemanzelle
 ---
 
 There is a razor-thin margin of acceptable door-holding etiquette. Too soon, and the person feels obligated to speed up, cursing your generosity. Too late, and you are an irredeemable monster.
