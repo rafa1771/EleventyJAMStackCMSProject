@@ -5,7 +5,7 @@ description: "Vizt Nivlir observes the peculiar social contract of waiting
   nod to the receptionist, and the curious phenomenon of people pretending not
   to exist."
 author: Vizt Nivlir
-date: 2025-03-02T05:36:00.000Z
+date: 2023-03-02T05:36:00.000Z
 tags:
   - post
 image: /assets/blog/vizt-nivlir_waiting.png
