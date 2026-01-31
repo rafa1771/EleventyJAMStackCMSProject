@@ -220,8 +220,11 @@ section,
 
 .site-branding .site-title {
   margin: 0;
-  font-size: 1.5rem; /* Or your preferred size */
-  color: var(--clr-neutral-900); /* Or replace with desired color */
+  font-family: var(--ff-heading);
+  font-size: 1.6rem; /* Or your preferred size */
+  font-style: italic;
+  font-weight: var(--fw-900);
+  color: var(--clr-primary-600); /* Or replace with desired color */
 }
 
 .page-header__content {
@@ -236,7 +239,7 @@ section,
 }
 
 .nav-list a {
-  color: var(--clr-neutral-900);
+  color: var(--clr-primary-600);
   text-decoration: none;
 }
 
@@ -244,6 +247,18 @@ section,
 .nav-list a:hover {
   color: var(--clr-primary-400);
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .site-branding {
+    max-width: 50vw; /* Optional spacing between logo and text */
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5em; /* space between links */
+    line-height: 1; /* control line height */
+  }
 }
 
 /* //////////////////////
