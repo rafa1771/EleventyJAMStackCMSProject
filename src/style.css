@@ -202,7 +202,7 @@ section,
   /////////////////////// */
 
 .page-header {
-  padding: 2em 0;
+  padding: 1em 0 0;
 }
 
 .site-branding {
@@ -215,6 +215,7 @@ section,
 .site-branding img {
   display: block;
   height: auto;
+  width: 4rem;
 }
 
 .site-branding .site-title {
@@ -226,6 +227,7 @@ section,
 .page-header__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list {
