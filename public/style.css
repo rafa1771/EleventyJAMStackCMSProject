@@ -6,7 +6,8 @@
   --fs-700: 2rem;
 
   --ff-body: "IBM Plex Sans", sans-serif;
-  --ff-heading: "Playfair Display", serif;
+  --ff-heading: "IBM Plex Mono", monospace;
+  --ff-button: "DM Mono", monospace;
 
   --fw-400: 400;
   --fw-700: 700;
@@ -16,8 +17,10 @@
   --clr-primary-300: hsla(169, 100%, 39%, 1);
   --clr-primary-400: hsla(169, 100%, 26%, 1);
   --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-600: hsla(0, 0%, 48%, 1);
 
   --clr-neutral-100: hsla(45, 29%, 97%, 1);
+  --clr-neutral-200: hsla(17, 15%, 91%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
   --clr-neutral-500: hsla(0, 0%, 60%, 1);
@@ -93,10 +96,15 @@ picture {
 
 /* Inherit fonts for inputs and buttons */
 input,
-button,
 textarea,
 select {
   font: inherit;
+}
+
+button,
+.btn {
+  font-family: var(--ff-button);
+  font-weight: var(--fw-700);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -195,6 +203,24 @@ section,
 
 .page-header {
   padding: 2em 0;
+}
+
+.site-branding {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns image and text vertically */
+  gap: 1rem; /* Optional spacing between logo and text */
+}
+
+.site-branding img {
+  display: block;
+  height: auto;
+}
+
+.site-branding .site-title {
+  margin: 0;
+  font-size: 1.5rem; /* Or your preferred size */
+  color: var(--clr-neutral-900); /* Or replace with desired color */
 }
 
 .page-header__content {
