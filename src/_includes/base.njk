@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A collection of quiet digressions, technical oddities, and creative musings from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
     <meta property="og:title" content="Vizt Nivlir – Asides">
@@ -44,5 +45,19 @@
   }
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isSpanish = navigator.language.toLowerCase().startsWith("es");
+    console.log("Browser language:", navigator.language); // Debug
+    if (isSpanish) {
+      document.querySelectorAll("[data-translate-es]").forEach((el) => {
+        const translation = el.getAttribute("data-translate-es");
+        if (translation) {
+          el.textContent = translation;
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>

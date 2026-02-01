@@ -2,7 +2,7 @@
 title: The Existential Dread of an Empty Email Subject Line
 author: Vizt Nivlir
 date: 2024-05-01
-tags: ["post", "featured"]
+tags: ["post"]
 image: /assets/blog/vizt_sends_an_email_without_a_subject.jpg
 imageAlt: Vizt at work
 description: No man should have to suffer the realization that he has sent an important email with an empty subject line. And yet, here we are.

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A collection of quiet digressions, technical oddities, and creative musings from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
     <meta property="og:title" content="Vizt Nivlir – Asides">
@@ -34,17 +35,19 @@
       <div class="site-branding">
         <a href="/">
           <img src="/assets/ViztNivlirLogo2.png" width="100rem" alt="Vizt Nivlir Logo"></img>
-        </a>  
-        <h1 class="site-title">vizt nivlir</h1>
+        </a>
+        <a href="/" class="site-title-link">
+          <h1 class="site-title notranslate" translate="no">vizt nivlir</h1>
+        </a>
       </div>
       <nav>
         <ul role="list" class="nav-list flex-group">
           
           <li>
-            <a href="/blog/">All Asides</a>
+            <a href="/blog/" data-translate-es="Todos Apartes">All Asides</a>
           </li>
           <li>
-            <a href="https://viztnivlir.com" target="_blank" rel="noopener">Projects</a>
+            <a href="https://viztnivlir.com" target="_blank" rel="noopener" data-translate-es="Proyectos">Projects</a>
           </li>
           
         </ul>
@@ -100,5 +103,19 @@
   }
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isSpanish = navigator.language.toLowerCase().startsWith("es");
+    console.log("Browser language:", navigator.language); // Debug
+    if (isSpanish) {
+      document.querySelectorAll("[data-translate-es]").forEach((el) => {
+        const translation = el.getAttribute("data-translate-es");
+        if (translation) {
+          el.textContent = translation;
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
