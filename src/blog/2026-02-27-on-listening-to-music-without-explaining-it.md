@@ -7,6 +7,7 @@ author: Vizt Nivlir
 date: 2026-02-27T15:31:00.000+01:00
 tags:
   - post
+  - culture
 image: /assets/blog/vizt-playlist.jpg
 imageAlt: Vizt at dawn, feeling the groove
 ---
