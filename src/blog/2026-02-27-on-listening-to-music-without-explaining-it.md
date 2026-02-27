@@ -1,5 +1,5 @@
 ---
-title: On Listening to Music Without Explaining It
+title: On the Quiet Confidence of an Eclectic Playlist
 description: Vizt Nivlir reflects on his eclectic playlist—jazz, library
   soundtracks, Brazilian warmth, Japanese soul—and what it means to move through
   the world accompanied by sound that does not require justification.
