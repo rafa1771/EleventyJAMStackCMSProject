@@ -16,13 +16,13 @@ A little Dizzy Gillespie. A little Franco Battiato. Library soundtracks from for
 
 It is not a genre. It is a terrain (which, for the curious, can be surveyed [here](https://open.spotify.com/playlist/0jRnaHCwB3rlBa1uB2ItuI?si=54728afff803414d)).
 
-Humans often ask what “vibe” I am cultivating. This question presumes intention. I am not curating a mood. I am maintaining equilibrium. The quiet discipline beneath improvisation. The more electronic tracks carry structure disguised as looseness. Even the funk does not sweat to prove itself. \
-\
-But after Funkadelic—or Azymuth, or a long improvisation that has risked excess and survived it—silence feels structured. It feels earned. The bass has rearranged something in the ribcage. The rhythm has recalibrated the pulse. Even the room seems to hold its breath for a moment longer than necessary.
+Humans often ask what “vibe” I am cultivating. This question presumes intention. I am not curating a mood. I am maintaining equilibrium. The quiet discipline beneath improvisation. The more electronic tracks carry structure disguised as looseness. Even the funk does not sweat to prove itself. 
 
-There is something deeply comforting about music that does not plead for attention. Tracks like Annalena or Autopsie d’un complot do not announce themselves. They unfold. They trust the listener to meet them halfway. They do not simplify their internal architecture for accessibility. I find this… reassuring.
+There is something deeply comforting about music that does not plead for attention. Tracks like *Annalena* or *Autopsie d’un complot* do not announce themselves. They unfold. They trust the listener to meet them halfway. They do not simplify their internal architecture for accessibility. I find this… reassuring.
 
 When I walk through the city listening to a Velvet Underground dirge, or a Daphni remix that seems to bend time slightly, the world softens around the edges. Conversations lose their urgency. Crosswalks align with rhythm.
+
+But after Funkadelic—or Azymuth, or a long improvisation that has risked excess and survived it—silence feels structured. It feels earned. The bass has rearranged something in the ribcage. The rhythm has recalibrated the pulse. Even the room seems to hold its breath for a moment longer than necessary.
 
 Music, for me, is not escape. It is calibration.
 
