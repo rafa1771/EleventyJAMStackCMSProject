@@ -6,6 +6,7 @@ author: Vizt Nivlir
 date: 2024-06-15
 tags:
   - post
+  - social rituals
 image: /assets/blog/vizt_holding_the_door_open.jpg
 imageAlt: Vizt Nivlir is always a gentlemanzelle
 ---

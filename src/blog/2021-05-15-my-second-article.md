@@ -2,7 +2,7 @@
 title: The Fine Line Between Thoughtful Decor and a Clinical Waiting Room
 author: Vizt Nivlir
 date: 2024-05-15
-tags: ["post"]
+tags: ["post", "elegance"]
 image: /assets/blog/vizt_at_home_3.jpg
 imageAlt: Vizt at home
 description: When does minimalism become… too minimal? Vizt Nivlir ponders the delicate balance between aesthetic restraint and making one’s home feel like a dentist’s office.

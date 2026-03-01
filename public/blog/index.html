@@ -32,7 +32,7 @@
 <header class="page-header">
 <div class="container">
     <div class="page-header__content">
-      <div class="site-branding">
+      <div class="site-branding" translate="no">
         <a href="/">
           <img src="/assets/ViztNivlirLogo2.png" width="100rem" alt="Vizt Nivlir Logo"></img>
         </a>
@@ -58,9 +58,19 @@
     
     
 <div class="section container">
-<h1 class="section-title" data-translate-es="Apartes recientes">Recent asides</h1>
+  <h1 class="section-title" id="blog-heading" data-label-en="All Asides" data-translate-es="Todos Apartes">All Asides</h1>
 
-  <ul role="list" class="articles__list flow"><li><li>
+  <div id="tag-filters" class="tag-filters" role="group" aria-label="Filter by category"></div>
+
+  <ul role="list" class="articles__list flow" id="articles-list"><li data-tags="post:,post,listening">
+<article class="snippet">
+    <img src="/assets/blog/vizt-playlist.jpg" alt="Vizt at dawn, feeling the groove" class="snippet__image">
+    <h3 class="snippet__title"><a href="/blog/2026-02-27-on-listening-to-music-without-explaining-it/">On the Quiet Confidence of an Eclectic Playlist</a></h3>
+    <p class="snippet__meta">by <span>Vizt Nivlir</span> on <span>Feb 27, 2026</span></p>
+    <p class="snippet__body">Vizt Nivlir reflects on his eclectic playlist—jazz, library soundtracks, Brazilian warmth, Japanese soul—and what it means to move through the world accompanied by sound that does not require justification.</p>
+    <a href="/blog/2026-02-27-on-listening-to-music-without-explaining-it/" class="btn btn--primary">Continue Reading</a>
+</article>
+</li><li data-tags="post:,post,featured,social rituals,perimeter">
 <article class="snippet">
     <img src="/assets/blog/b43c8f2f-a2b3-4039-92d6-5ff9a9d927c8.png" alt="Vizt making small talk" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2026-01-25-the-curious-ritual-of-asking-how-one-is-doing-and-then-not-listening/">The Curious Ritual of Asking How One Is Doing, and Then Not Listening</a></h3>
@@ -68,7 +78,7 @@
     <p class="snippet__body">In human social life, few customs are more universally practiced and less genuinely engaged than the question, “How are you?” Vizt Nivlir considers the ritual’s form, function, and quiet absurdity.</p>
     <a href="/blog/2026-01-25-the-curious-ritual-of-asking-how-one-is-doing-and-then-not-listening/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,work,architecture">
 <article class="snippet">
     <img src="/assets/blog/vizt-getting-a-late-night-request.jpg" alt="A modest request, received during the sacred rite of evening ablutions." class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-04-22-the-myth-of-the-“quick-little-change”/">The Myth of the “Quick Little Change”</a></h3>
@@ -76,7 +86,7 @@
     <p class="snippet__body">There are no small changes. Only small understandings of what a change requires. Vizt Nivlir shares a late-night reflection on the quiet unraveling of carefully laid plans—one politely worded message at a time.</p>
     <a href="/blog/2025-04-22-the-myth-of-the-“quick-little-change”/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,work,architecture">
 <article class="snippet">
     <img src="/assets/blog/vizt-making-it-pop.jpg" alt="Vizt making it pop" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-04-03-the-elusive-alchemy-of-making-it-pop/">The Elusive Alchemy of Making It Pop</a></h3>
@@ -84,7 +94,7 @@
     <p class="snippet__body">There are few phrases more frequently uttered and less concretely defined in the world of creative work than “Just make it pop.” Vizt Nivlir considers the ambiguity, the existential toll, and the quiet panic it inspires.</p>
     <a href="/blog/2025-04-03-the-elusive-alchemy-of-making-it-pop/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,social rituals,interspecies">
 <article class="snippet">
     <img src="/assets/blog/vizt-at-the-dentist-2.jpg" alt="&quot;Open wide, Mr. Nivlir.&quot;" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-03-14-the-disproportionate-ordeal-of-a-routine-dental-visit/">The Disproportionate Ordeal of a Routine Dental Visit</a></h3>
@@ -92,7 +102,7 @@
     <p class="snippet__body">There are few events in life as simultaneously mundane and existentially harrowing as a visit to the dentist. Vizt Nivlir reflects on the unique challenges of dental care as a gazelle man.</p>
     <a href="/blog/2025-03-14-the-disproportionate-ordeal-of-a-routine-dental-visit/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,featured,social rituals,interspecies">
 <article class="snippet">
     <img src="/assets/blog/vizt-height-difference.jpg" alt="Vizt Nivlir meeting his date" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-03-08-the-question-of-height-a-matter-of-perspective/">The Question of Height: A Matter of Perspective</a></h3>
@@ -100,7 +110,7 @@
     <p class="snippet__body">Dating comes with its share of logistical concerns, but few are as persistent as the matter of height. Vizt Nivlir reflects on the physics and psychology of towering over his dates.</p>
     <a href="/blog/2025-03-08-the-question-of-height-a-matter-of-perspective/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,architecture">
 <article class="snippet">
     <img src="/assets/blog/vizt-in-dependency-hell.jpg" alt="Vizt in dependency hell" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-03-08-the-quiet-desperation-of-dependency-hell/">The Quiet Desperation of Dependency Hell</a></h3>
@@ -108,7 +118,7 @@
     <p class="snippet__body">Navigating the tangled web of software dependencies can lead even the most stoic developer into the depths of despair. Vizt Nivlir reflects on the trials of maintaining harmony among conflicting packages.</p>
     <a href="/blog/2025-03-08-the-quiet-desperation-of-dependency-hell/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,elegance">
 <article class="snippet">
     <img src="/assets/blog/vizt-dandy-dilemma-with-horns.jpg" alt="Vizt Nivlir" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-03-04-the-dandy-dilemma-how-to-dress-when-you-have-horns/">The Dandy Dilemma: How to Dress When You Have Horns</a></h3>
@@ -116,7 +126,7 @@
     <p class="snippet__body">Finding the perfect turtleneck is difficult enough without the added complexity of two magnificent, spiraling horns. Vizt Nivlir, the sartorially inclined gazelle-man, reflects on the challenges of high fashion when your headpiece is non-removable.</p>
     <a href="/blog/2025-03-04-the-dandy-dilemma-how-to-dress-when-you-have-horns/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,social rituals">
 <article class="snippet">
     <img src="/assets/blog/6.png" alt="Vizt Nivlir is always ready" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2024-11-22-the-unbearable-lightness-of-an-appointment-announcement/">The Unbearable Lightness of an Appointment Announcement</a></h3>
@@ -124,7 +134,7 @@
     <p class="snippet__body">When one receives the solemn declaration that “Vizt Nivlir will see you now,” a peculiar anxiety sets in. But what does it truly mean to be seen?</p>
     <a href="/blog/2024-11-22-the-unbearable-lightness-of-an-appointment-announcement/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,featured,social rituals">
 <article class="snippet">
     <img src="/assets/blog/vizt_in_the_elevator.jpg" alt="Vizt Nivlir in an elevator" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-06-15-my-fifth-article/">The Perils of Overconfidence in Elevator Etiquette</a></h3>
@@ -132,7 +142,7 @@
     <p class="snippet__body">Few things are more revealing of one’s character than how they handle the unspoken rules of an elevator ride. Vizt Nivlir reflects on the delicate art of standing still and looking indifferent.</p>
     <a href="/blog/2021-06-15-my-fifth-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,social rituals">
 <article class="snippet">
     <img src="/assets/blog/vizt_holding_the_door_open.jpg" alt="Vizt Nivlir is always a gentlemanzelle" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-04-05-my-sixth-article/">The Social Contract of Holding the Door for Strangers</a></h3>
@@ -140,7 +150,7 @@
     <p class="snippet__body">At what distance is a person too far away for you to hold the door? Vizt Nivlir examines one of the great ethical dilemmas of modern life.</p>
     <a href="/blog/2021-04-05-my-sixth-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,work,architecture">
 <article class="snippet">
     <img src="/assets/blog/vizt_at_work_2.jpg" alt="Vizt at work" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-06-01-my-fourth-article/">The Psychology of Staring at a Computer Screen and Hoping for the Best</a></h3>
@@ -148,7 +158,7 @@
     <p class="snippet__body">Despite his impressive intellect, Vizt Nivlir, like all modern professionals, finds himself engaging in the ancient ritual of staring blankly at a screen, willing the work to complete itself.</p>
     <a href="/blog/2021-06-01-my-fourth-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,elegance">
 <article class="snippet">
     <img src="/assets/blog/22.jpg" alt="Vizt vs. pineapple rizz" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-05-28-my-third-article/">The Pineapple Conundrum: A Case for Fruit-Free Interiors</a></h3>
@@ -156,7 +166,7 @@
     <p class="snippet__body">In his ongoing battle against unnecessary distractions, Vizt Nivlir explores the dangers of unexpected pineapple placement and its impact on one’s carefully cultivated aesthetic.</p>
     <a href="/blog/2021-05-28-my-third-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,elegance">
 <article class="snippet">
     <img src="/assets/blog/vizt_at_home_3.jpg" alt="Vizt at home" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-05-15-my-second-article/">The Fine Line Between Thoughtful Decor and a Clinical Waiting Room</a></h3>
@@ -164,7 +174,7 @@
     <p class="snippet__body">When does minimalism become… too minimal? Vizt Nivlir ponders the delicate balance between aesthetic restraint and making one’s home feel like a dentist’s office.</p>
     <a href="/blog/2021-05-15-my-second-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,work,perimeter">
 <article class="snippet">
     <img src="/assets/blog/vizt_sends_an_email_without_a_subject.jpg" alt="Vizt at work" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2021-05-01-my-first-article/">The Existential Dread of an Empty Email Subject Line</a></h3>
@@ -172,7 +182,7 @@
     <p class="snippet__body">No man should have to suffer the realization that he has sent an important email with an empty subject line. And yet, here we are.</p>
     <a href="/blog/2021-05-01-my-first-article/" class="btn btn--primary">Continue Reading</a>
 </article>
-</li><li>
+</li><li data-tags="post:,post,social rituals">
 <article class="snippet">
     <img src="/assets/blog/vizt-nivlir_waiting.png" alt="Vizt waits to wait" class="snippet__image">
     <h3 class="snippet__title"><a href="/blog/2025-03-04-the-waiting-room-chronicles-a-study-in-human-behavior/">The Waiting Room Chronicles: A Study in Human Behavior</a></h3>
@@ -181,13 +191,158 @@
     <a href="/blog/2025-03-04-the-waiting-room-chronicles-a-study-in-human-behavior/" class="btn btn--primary">Continue Reading</a>
 </article>
 </li></ul>
+
+  <nav class="pagination" id="pagination" aria-label="Page navigation"></nav>
 </div>
-   
+
+<script>
+(function () {
+  var POSTS_PER_PAGE = 10;
+  var SYSTEM_TAGS = ['post', 'post:', 'featured'];
+
+  var list = document.getElementById('articles-list');
+  var filterContainer = document.getElementById('tag-filters');
+  var paginationEl = document.getElementById('pagination');
+  var heading = document.getElementById('blog-heading');
+  var items = Array.prototype.slice.call(list.querySelectorAll(':scope > li'));
+
+  var activeTag = 'all';
+  var currentPage = 1;
+  var isSpanish = navigator.language.toLowerCase().startsWith('es');
+
+  // Collect unique category tags from rendered data-tags attributes
+  var tagSet = {};
+  items.forEach(function (item) {
+    var raw = item.getAttribute('data-tags') || '';
+    raw.split(',').forEach(function (t) {
+      var tag = t.trim();
+      if (tag && SYSTEM_TAGS.indexOf(tag) === -1) {
+        tagSet[tag] = true;
+      }
+    });
+  });
+  var categoryTags = Object.keys(tagSet).sort();
+
+  function formatTag(tag) {
+    return tag
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function makeButton(tagValue, label) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = label;
+    btn.setAttribute('data-tag', tagValue);
+    btn.className = 'tag-filter-btn' + (tagValue === 'all' ? ' tag-filter-btn--active' : '');
+    btn.addEventListener('click', function () { selectTag(tagValue, label); });
+    return btn;
+  }
+
+  function buildFilters() {
+    filterContainer.appendChild(makeButton('all', 'All'));
+    categoryTags.forEach(function (tag) {
+      filterContainer.appendChild(makeButton(tag, formatTag(tag)));
+    });
+  }
+
+  function selectTag(tag, label) {
+    activeTag = tag;
+    currentPage = 1;
+
+    // Toggle active class on filter buttons
+    var btns = filterContainer.querySelectorAll('.tag-filter-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle('tag-filter-btn--active', btns[i].getAttribute('data-tag') === tag);
+    }
+
+    // Update heading
+    if (tag === 'all') {
+      heading.textContent = isSpanish
+        ? (heading.getAttribute('data-translate-es') || 'All Asides')
+        : 'All Asides';
+    } else {
+      heading.textContent = label;
+    }
+
+    renderPage();
+  }
+
+  function getFiltered() {
+    if (activeTag === 'all') return items;
+    return items.filter(function (item) {
+      var tags = (item.getAttribute('data-tags') || '').split(',').map(function (t) { return t.trim(); });
+      return tags.indexOf(activeTag) !== -1;
+    });
+  }
+
+  function renderPage() {
+    var filtered = getFiltered();
+    var totalPages = Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    var start = (currentPage - 1) * POSTS_PER_PAGE;
+    var visible = filtered.slice(start, start + POSTS_PER_PAGE);
+
+    items.forEach(function (item) {
+      item.hidden = true;
+      item.classList.remove('is-first-visible');
+    });
+    visible.forEach(function (item, index) {
+      item.hidden = false;
+      // Mark the first visible item so CSS can suppress its top border
+      if (index === 0) item.classList.add('is-first-visible');
+    });
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages) {
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makePageBtn(label, page, isArrow) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = label;
+      btn.className = 'pagination__btn';
+      if (isArrow) {
+        btn.setAttribute('aria-label', label === '\u2190' ? 'Previous page' : 'Next page');
+        var atEdge = (label === '\u2190' && currentPage === 1) || (label === '\u2192' && currentPage === totalPages);
+        if (atEdge) btn.disabled = true;
+      } else {
+        if (page === currentPage) {
+          btn.classList.add('pagination__btn--active');
+          btn.setAttribute('aria-current', 'page');
+        }
+      }
+      btn.addEventListener('click', function () { goToPage(page); });
+      return btn;
+    }
+
+    paginationEl.appendChild(makePageBtn('\u2190', currentPage - 1, true));
+    for (var i = 1; i <= totalPages; i++) {
+      paginationEl.appendChild(makePageBtn(String(i), i, false));
+    }
+    paginationEl.appendChild(makePageBtn('\u2192', currentPage + 1, true));
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    renderPage();
+    heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  buildFilters();
+  renderPage();
+})();
+</script>
+
      <footer class="site-footer">
   
   <path d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"/>
 </svg>
-  <p>© 2026 Vizt Nivlir. All rights reserved.</p>
+  <p>© 2026 <span translate="no">Vizt Nivlir</span>. All rights reserved.</p>
 </footer>
 
      <script>
@@ -203,18 +358,60 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const isSpanish = navigator.language.toLowerCase().startsWith("es");
-    console.log("Browser language:", navigator.language); // Debug
-    if (isSpanish) {
-      document.querySelectorAll("[data-translate-es]").forEach((el) => {
-        const translation = el.getAttribute("data-translate-es");
-        if (translation) {
-          el.textContent = translation;
-        }
-      });
-    }
+(function () {
+  // Elements whose text must never change regardless of what a translation
+  // tool does — even if translate="no" is ignored by a given tool.
+  var PROTECTED = ['.site-title'];
+  var originals = {};
+
+  function snapshot() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el) originals[sel] = el.textContent;
+    });
+  }
+
+  // Applies our hand-crafted Spanish translations, overriding whatever
+  // a browser translation tool may have guessed.
+  function applyTranslations(lang) {
+    if (!(lang || '').toLowerCase().startsWith('es')) return;
+    document.querySelectorAll('[data-translate-es]').forEach(function (el) {
+      var t = el.getAttribute('data-translate-es');
+      if (t) el.textContent = t;
+    });
+  }
+
+  // Restores text that must never be translated (fallback in case a tool
+  // ignores the translate="no" attribute).
+  function restoreProtected() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el && originals[sel] && el.textContent !== originals[sel]) {
+        el.textContent = originals[sel];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    snapshot();
+
+    // Case 1: browser language is configured as Spanish.
+    applyTranslations(navigator.language || '');
+
+    // Case 2: user activates a browser translation tool (Google Translate,
+    // Firefox Translate, Edge, Safari…). These tools signal their activity
+    // by changing html[lang] or adding a class like "translated-ltr".
+    var htmlEl = document.documentElement;
+    var observer = new MutationObserver(function () {
+      applyTranslations(htmlEl.lang || '');
+      restoreProtected();
+    });
+    observer.observe(htmlEl, {
+      attributes: true,
+      attributeFilter: ['lang', 'class']
+    });
   });
+})();
 </script>
 </body>
 </html>

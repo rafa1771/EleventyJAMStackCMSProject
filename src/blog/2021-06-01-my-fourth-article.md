@@ -2,7 +2,7 @@
 title: The Psychology of Staring at a Computer Screen and Hoping for the Best
 author: Vizt Nivlir
 date: 2024-06-01
-tags: ["post"]
+tags: ["post", "work", "architecture"]
 image: /assets/blog/vizt_at_work_2.jpg
 imageAlt: Vizt at work
 description: Despite his impressive intellect, Vizt Nivlir, like all modern professionals, finds himself engaging in the ancient ritual of staring blankly at a screen, willing the work to complete itself.

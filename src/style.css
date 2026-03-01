@@ -139,6 +139,7 @@ h3 {
   font-family: var(--ff-heading);
   font-weight: var(--fw-900);
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 strong {
@@ -147,7 +148,7 @@ strong {
 
 section,
 .section {
-  padding: min(10vh, 10em) 0;
+  padding: clamp(3rem, 8vh, 6rem) 0;
 }
 
 /* //////////////////////
@@ -202,7 +203,7 @@ section,
   /////////////////////// */
 
 .page-header {
-  padding: 1em 0 0;
+  padding: 1em 0;
 }
 
 .site-branding {
@@ -322,16 +323,18 @@ section,
 @media (min-width: 45em) {
   .hero > div {
     grid-auto-flow: column;
+    grid-template-columns: 1fr 0.6fr;
   }
 }
 
 .featured-articles {
   background-color: var(--clr-primary-200);
+  border-top: 1px solid var(--clr-primary-300);
 }
 
 .articles__list {
   --flow-spacer: 3rem;
-  margin: 6rem 0;
+  margin: 2.5rem 0;
 }
 
 /* //////////////////////
@@ -423,6 +426,10 @@ section,
   border-radius: 0.25em;
   align-self: start;
   justify-self: start;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .btn:focus {
@@ -440,6 +447,7 @@ section,
 .btn--primary:focus {
   background: var(--clr-primary-500);
   border-color: var(--clr-primary-500);
+  transform: translateY(-2px);
 }
 
 .btn--neutral {
@@ -454,3 +462,149 @@ section,
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
+
+/* //////////////////////
+  Tag Filters
+  /////////////////////// */
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1.75rem 0 0;
+}
+
+.tag-filter-btn {
+  cursor: pointer;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  padding: 0.35em 1.1em;
+  border-radius: 2em;
+  border: 2px solid var(--clr-primary-400);
+  background: transparent;
+  color: var(--clr-primary-400);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tag-filter-btn:hover,
+.tag-filter-btn:focus {
+  background: var(--clr-primary-200);
+  outline: none;
+}
+
+.tag-filter-btn--active {
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.tag-filter-btn--active:hover,
+.tag-filter-btn--active:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+}
+
+/* Override top margin on the blog-page article list
+   so it sits closer to the tag filters */
+#articles-list.articles__list {
+  margin-top: 2rem;
+}
+
+/* //////////////////////
+  Pagination
+  /////////////////////// */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em;
+  justify-content: center;
+  margin: 3rem 0 1rem;
+}
+
+.pagination__btn {
+  cursor: pointer;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  min-width: 2.5em;
+  padding: 0.35em 0.8em;
+  border-radius: 0.25em;
+  border: 2px solid var(--clr-neutral-200);
+  background: transparent;
+  color: var(--clr-neutral-900);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination__btn:hover:not(:disabled),
+.pagination__btn:focus:not(:disabled) {
+  background: var(--clr-primary-200);
+  border-color: var(--clr-primary-400);
+  outline: none;
+}
+
+.pagination__btn--active {
+  background: var(--clr-primary-400);
+  border-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.pagination__btn--active:hover,
+.pagination__btn--active:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* //////////////////////
+  Article page — meta + body
+  /////////////////////// */
+
+.article-meta {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-300);
+  font-family: var(--ff-button);
+  letter-spacing: 0.02em;
+}
+
+.article-meta time {
+  color: var(--clr-neutral-400);
+}
+
+.main-article__body {
+  line-height: 1.75;
+  --flow-spacer: 1.25em;
+}
+
+/* //////////////////////
+  Article list — separators + alternating layout
+  /////////////////////// */
+
+/* On the filtered/paginated blog page the first *visible* item may not
+   be the first DOM child, so suppress the flow margin it would inherit. */
+.articles__list > li.is-first-visible {
+  margin-top: 0;
+}
+
+/* Alternating image position for visual rhythm on desktop */
+/* @media (min-width: 45em) {
+  .articles__list > li:nth-child(even) .snippet {
+    grid-template-areas:
+      "image title"
+      "image meta"
+      "image body"
+      "image button";
+    grid-template-columns: 38% 1fr;
+  }
+} */

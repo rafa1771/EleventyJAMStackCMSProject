@@ -4,12 +4,158 @@ layout: base.njk
 ---
 
 <div class="section container">
-<h1 class="section-title" data-translate-es="Apartes recientes">Recent asides</h1>
+  <h1 class="section-title" id="blog-heading" data-label-en="All Asides" data-translate-es="Todos Apartes">All Asides</h1>
 
-  <ul role="list" class="articles__list flow"><li>
+  <div id="tag-filters" class="tag-filters" role="group" aria-label="Filter by category"></div>
+
+  <ul role="list" class="articles__list flow" id="articles-list">
     {%- for post in collections.post | reverse -%}
       {% include 'article-snippet.njk' %}
-    {%- endfor -%} 
+    {%- endfor -%}
   </ul>
+
+  <nav class="pagination" id="pagination" aria-label="Page navigation"></nav>
 </div>
-   
+
+<script>
+(function () {
+  var POSTS_PER_PAGE = 10;
+  var SYSTEM_TAGS = ['post', 'post:', 'featured'];
+
+  var list = document.getElementById('articles-list');
+  var filterContainer = document.getElementById('tag-filters');
+  var paginationEl = document.getElementById('pagination');
+  var heading = document.getElementById('blog-heading');
+  var items = Array.prototype.slice.call(list.querySelectorAll(':scope > li'));
+
+  var activeTag = 'all';
+  var currentPage = 1;
+  var isSpanish = navigator.language.toLowerCase().startsWith('es');
+
+  // Collect unique category tags from rendered data-tags attributes
+  var tagSet = {};
+  items.forEach(function (item) {
+    var raw = item.getAttribute('data-tags') || '';
+    raw.split(',').forEach(function (t) {
+      var tag = t.trim();
+      if (tag && SYSTEM_TAGS.indexOf(tag) === -1) {
+        tagSet[tag] = true;
+      }
+    });
+  });
+  var categoryTags = Object.keys(tagSet).sort();
+
+  function formatTag(tag) {
+    return tag
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function makeButton(tagValue, label) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = label;
+    btn.setAttribute('data-tag', tagValue);
+    btn.className = 'tag-filter-btn' + (tagValue === 'all' ? ' tag-filter-btn--active' : '');
+    btn.addEventListener('click', function () { selectTag(tagValue, label); });
+    return btn;
+  }
+
+  function buildFilters() {
+    filterContainer.appendChild(makeButton('all', 'All'));
+    categoryTags.forEach(function (tag) {
+      filterContainer.appendChild(makeButton(tag, formatTag(tag)));
+    });
+  }
+
+  function selectTag(tag, label) {
+    activeTag = tag;
+    currentPage = 1;
+
+    // Toggle active class on filter buttons
+    var btns = filterContainer.querySelectorAll('.tag-filter-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle('tag-filter-btn--active', btns[i].getAttribute('data-tag') === tag);
+    }
+
+    // Update heading
+    if (tag === 'all') {
+      heading.textContent = isSpanish
+        ? (heading.getAttribute('data-translate-es') || 'All Asides')
+        : 'All Asides';
+    } else {
+      heading.textContent = label;
+    }
+
+    renderPage();
+  }
+
+  function getFiltered() {
+    if (activeTag === 'all') return items;
+    return items.filter(function (item) {
+      var tags = (item.getAttribute('data-tags') || '').split(',').map(function (t) { return t.trim(); });
+      return tags.indexOf(activeTag) !== -1;
+    });
+  }
+
+  function renderPage() {
+    var filtered = getFiltered();
+    var totalPages = Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    var start = (currentPage - 1) * POSTS_PER_PAGE;
+    var visible = filtered.slice(start, start + POSTS_PER_PAGE);
+
+    items.forEach(function (item) {
+      item.hidden = true;
+      item.classList.remove('is-first-visible');
+    });
+    visible.forEach(function (item, index) {
+      item.hidden = false;
+      // Mark the first visible item so CSS can suppress its top border
+      if (index === 0) item.classList.add('is-first-visible');
+    });
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages) {
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makePageBtn(label, page, isArrow) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = label;
+      btn.className = 'pagination__btn';
+      if (isArrow) {
+        btn.setAttribute('aria-label', label === '\u2190' ? 'Previous page' : 'Next page');
+        var atEdge = (label === '\u2190' && currentPage === 1) || (label === '\u2192' && currentPage === totalPages);
+        if (atEdge) btn.disabled = true;
+      } else {
+        if (page === currentPage) {
+          btn.classList.add('pagination__btn--active');
+          btn.setAttribute('aria-current', 'page');
+        }
+      }
+      btn.addEventListener('click', function () { goToPage(page); });
+      return btn;
+    }
+
+    paginationEl.appendChild(makePageBtn('\u2190', currentPage - 1, true));
+    for (var i = 1; i <= totalPages; i++) {
+      paginationEl.appendChild(makePageBtn(String(i), i, false));
+    }
+    paginationEl.appendChild(makePageBtn('\u2192', currentPage + 1, true));
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    renderPage();
+    heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  buildFilters();
+  renderPage();
+})();
+</script>

@@ -46,18 +46,60 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const isSpanish = navigator.language.toLowerCase().startsWith("es");
-    console.log("Browser language:", navigator.language); // Debug
-    if (isSpanish) {
-      document.querySelectorAll("[data-translate-es]").forEach((el) => {
-        const translation = el.getAttribute("data-translate-es");
-        if (translation) {
-          el.textContent = translation;
-        }
-      });
-    }
+(function () {
+  // Elements whose text must never change regardless of what a translation
+  // tool does — even if translate="no" is ignored by a given tool.
+  var PROTECTED = ['.site-title'];
+  var originals = {};
+
+  function snapshot() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el) originals[sel] = el.textContent;
+    });
+  }
+
+  // Applies our hand-crafted Spanish translations, overriding whatever
+  // a browser translation tool may have guessed.
+  function applyTranslations(lang) {
+    if (!(lang || '').toLowerCase().startsWith('es')) return;
+    document.querySelectorAll('[data-translate-es]').forEach(function (el) {
+      var t = el.getAttribute('data-translate-es');
+      if (t) el.textContent = t;
+    });
+  }
+
+  // Restores text that must never be translated (fallback in case a tool
+  // ignores the translate="no" attribute).
+  function restoreProtected() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el && originals[sel] && el.textContent !== originals[sel]) {
+        el.textContent = originals[sel];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    snapshot();
+
+    // Case 1: browser language is configured as Spanish.
+    applyTranslations(navigator.language || '');
+
+    // Case 2: user activates a browser translation tool (Google Translate,
+    // Firefox Translate, Edge, Safari…). These tools signal their activity
+    // by changing html[lang] or adding a class like "translated-ltr".
+    var htmlEl = document.documentElement;
+    var observer = new MutationObserver(function () {
+      applyTranslations(htmlEl.lang || '');
+      restoreProtected();
+    });
+    observer.observe(htmlEl, {
+      attributes: true,
+      attributeFilter: ['lang', 'class']
+    });
   });
+})();
 </script>
 </body>
 </html>

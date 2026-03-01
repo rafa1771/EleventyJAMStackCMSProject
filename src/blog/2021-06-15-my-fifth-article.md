@@ -2,7 +2,7 @@
 title: The Perils of Overconfidence in Elevator Etiquette
 author: Vizt Nivlir
 date: 2024-06-15
-tags: ["post", "featured"]
+tags: ["post", "featured", "social rituals"]
 image: /assets/blog/vizt_in_the_elevator.jpg
 imageAlt: Vizt Nivlir in an elevator
 description: Few things are more revealing of one’s character than how they handle the unspoken rules of an elevator ride. Vizt Nivlir reflects on the delicate art of standing still and looking indifferent.

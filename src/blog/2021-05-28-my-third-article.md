@@ -2,7 +2,7 @@
 title: "The Pineapple Conundrum: A Case for Fruit-Free Interiors"
 author: Vizt Nivlir
 date: 2024-05-28
-tags: ["post"]
+tags: ["post", "elegance"]
 image: /assets/blog/22.jpg
 imageAlt: Vizt vs. pineapple rizz
 description: In his ongoing battle against unnecessary distractions, Vizt Nivlir explores the dangers of unexpected pineapple placement and its impact on one’s carefully cultivated aesthetic.

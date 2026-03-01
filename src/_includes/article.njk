@@ -2,21 +2,24 @@
 layout: 'base.njk'
 
 ---
-       
+
 <article class="main-article">
 <div class="container container--narrow flow">
-  
+
     <h1 class="article-title">
       {{ title }}
     </h1>
+    <p class="article-meta">
+      <span>{{ author }}</span><span aria-hidden="true"> &middot; </span><time>{{ date | postDate }}</time>
+    </p>
     <figure class="main-article__figure">
       <img src="{{ image }}" alt="{{ imageAlt }}">
       <figcaption>
         {{ imageAlt }}
       </figcaption>
     </figure>
-    
-    {{ content | safe }}
-  
+
+    <div class="main-article__body flow">{{ content | safe }}</div>
+
 </div>
 </article>

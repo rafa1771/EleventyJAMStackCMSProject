@@ -1,13 +1,13 @@
 ---
 title: "The Question of Height: A Matter of Perspective"
-description: Dating comes with its share of logistical concerns, but few are as
-  persistent as the matter of height. Vizt Nivlir reflects on the physics and
-  psychology of towering over his dates.
+description: Dating comes with its share of logistical concerns, but few are as persistent as the matter of height. Vizt Nivlir reflects on the physics and psychology of towering over his dates.
 author: Vizt Nivlir
 date: 2025-03-08T15:09:00.000Z
 tags:
   - post
   - featured
+  - social rituals
+  - interspecies
 image: /assets/blog/vizt-height-difference.jpg
 imageAlt: Vizt Nivlir meeting his date
 ---

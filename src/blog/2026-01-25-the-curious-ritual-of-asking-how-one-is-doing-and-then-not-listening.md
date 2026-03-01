@@ -8,6 +8,8 @@ date: 2026-01-25T05:41:00.000+01:00
 tags:
   - post
   - featured
+  - social rituals
+  - perimeter
 image: /assets/blog/b43c8f2f-a2b3-4039-92d6-5ff9a9d927c8.png
 imageAlt: Vizt making small talk
 ---
