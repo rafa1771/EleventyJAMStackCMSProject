@@ -1,5 +1,5 @@
 const { DateTime } = require("luxon");
-const site = require("./src/_data/site.js");
+const siteData = require("./src/_data/siteData.js");
 
 module.exports = function (eleventyConfig) {
   function normalizeTags(tags) {
@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("heroImages", (collectionApi) => {
     return collectionApi.getAll().filter((item) => {
       const tags = normalizeTags(item.data.tags);
-      const hasHeroTag = site.heroImageTags.some((tag) => tags.includes(tag));
+      const hasHeroTag = siteData.heroImageTags.some((tag) => tags.includes(tag));
 
       return hasHeroTag && item.data.image;
     });
