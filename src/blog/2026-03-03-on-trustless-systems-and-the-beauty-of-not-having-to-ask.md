@@ -8,9 +8,11 @@ date: 2026-03-03T03:18:00.000+01:00
 tags:
   - post
   - architecture
+  - hero image
 image: /assets/blog/vizt-trustless-system.jpg
 imageAlt: Vizt contemplating a trustless system
 ---
+
 There is a common misunderstanding: that a trustless system is one in which nothing can be trusted. But this is incorrect—linguistically, architecturally, philosophically.
 
 A trustless system is not cynical. It is precise. It does not rely on faith, memory, or a polite email thread. It is not built on the assumption that everyone will behave, or even show up. It is built so that behavior doesn’t need to be assumed at all.

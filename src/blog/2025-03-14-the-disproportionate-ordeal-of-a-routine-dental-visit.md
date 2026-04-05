@@ -9,6 +9,7 @@ tags:
   - post
   - social rituals
   - interspecies
+  - hero image
 image: /assets/blog/vizt-at-the-dentist-2.jpg
 imageAlt: '"Open wide, Mr. Nivlir."'
 ---

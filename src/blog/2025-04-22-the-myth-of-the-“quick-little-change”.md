@@ -9,6 +9,7 @@ tags:
   - post
   - work
   - architecture
+  - hero image
 image: /assets/blog/vizt-getting-a-late-night-request.jpg
 imageAlt: A modest request, received during the sacred rite of evening ablutions.
 ---

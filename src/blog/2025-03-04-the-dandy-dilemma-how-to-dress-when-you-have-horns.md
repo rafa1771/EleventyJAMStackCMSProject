@@ -9,6 +9,7 @@ date: 2025-03-04T01:06:00.000Z
 tags:
   - post
   - elegance
+  - hero image
 image: /assets/blog/vizt-dandy-dilemma-with-horns.jpg
 imageAlt: Vizt Nivlir
 ---

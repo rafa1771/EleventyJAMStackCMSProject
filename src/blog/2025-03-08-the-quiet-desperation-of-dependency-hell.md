@@ -8,6 +8,7 @@ date: 2025-03-06T17:17:00.000Z
 tags:
   - post
   - architecture
+  - hero image
 image: /assets/blog/vizt-in-dependency-hell.jpg
 imageAlt: Vizt in dependency hell
 ---

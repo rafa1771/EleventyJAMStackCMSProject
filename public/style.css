@@ -4,6 +4,8 @@
   --fs-500: 1.375rem;
   --fs-600: 1.875rem;
   --fs-700: 2rem;
+  --section-space: clamp(3rem, 8vh, 6rem);
+  --section-space-first: clamp(1.75rem, 5vh, 3.5rem);
 
   --ff-body: "IBM Plex Sans", sans-serif;
   --ff-heading: "IBM Plex Mono", monospace;
@@ -148,7 +150,7 @@ strong {
 
 section,
 .section {
-  padding: clamp(3rem, 8vh, 6rem) 0;
+  padding: var(--section-space) 0;
 }
 
 /* //////////////////////
@@ -204,6 +206,11 @@ section,
 
 .page-header {
   padding: 1em 0;
+}
+
+.page-header + section,
+.page-header + .section {
+  padding-top: var(--section-space-first);
 }
 
 .site-branding {
@@ -274,19 +281,70 @@ section,
 }
 
 @media (max-width: 600px) {
+  .page-header {
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .container.hero__layout {
+    gap: 1.2rem;
+  }
+
+  .hero__content {
+    --flow-spacer: 0.65rem;
+  }
+
+  .hero__body {
+    --flow-spacer: 0.75rem;
+  }
+
+  .hero__copy {
+    gap: 0.5rem;
+  }
+
+  .page-header__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
   .site-branding {
-    max-width: 50vw; /* Optional spacing between logo and text */
+    max-width: none;
+    gap: 0.6rem; /* Optional spacing between logo and text */
+    justify-content: center;
+  }
+
+  .site-branding img {
+    width: 3rem;
   }
 
   .site-branding .site-title {
-    font-size: 1.6rem; /* Or your preferred size */
+    font-size: clamp(2.45rem, 9.6vw, 3.3rem); /* Or your preferred size */
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
+  }
+
+  .page-header nav {
+    width: 100%;
   }
 
   .nav-list {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 0.5em; /* space between links */
-    line-height: 1; /* control line height */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem; /* space between links */
+    line-height: 1.2; /* control line height */
+  }
+
+  .nav-list a {
+    display: inline-block;
+    padding-block: 0.2rem;
+  }
+
+  .page-header + section,
+  .page-header + .section {
+    padding-top: clamp(1.25rem, 4vh, 2rem);
   }
 }
 
@@ -306,24 +364,73 @@ section,
   Homepage
   /////////////////////// */
 
-.hero > div {
+.hero__layout {
   display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: 1fr;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
   gap: 3em;
+}
+
+.hero__copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero__body {
+  --flow-spacer: 1em;
+}
+
+.hero__media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--clr-neutral-200);
+}
+
+.hero__media--desktop {
+  display: none;
 }
 
 .hero__image {
   width: 100%;
-  /* max-height: max(15rem, 40vh); */
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.hero__image.is-loaded {
+  opacity: 1;
 }
 
 @media (min-width: 45em) {
-  .hero > div {
-    grid-auto-flow: column;
+  .hero__layout {
     grid-template-columns: 1fr 0.6fr;
+    gap: 3em;
+  }
+
+  .hero__copy {
+    grid-column: 1;
+    gap: 1rem;
+  }
+
+  .hero__media {
+    grid-column: 2;
+  }
+
+  .hero__media--mobile {
+    display: none;
+  }
+
+  .hero__media--desktop {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image {
+    transition: none;
   }
 }
 

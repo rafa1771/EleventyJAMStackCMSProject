@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of quiet digressions, technical oddities, and creative musings from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
+    <meta property="og:title" content="Vizt Nivlir – Asides">
+    <meta property="og:description" content="Notes, fragments, and developer digressions from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
+    <meta property="og:image" content="/assets/ViztNivlirLogo2.png">
+    <meta property="og:url" content="https://asides.viztnivlir.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Vizt Nivlir" />
+    <link rel="manifest" href="/assets/site.webmanifest" />    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <title>On Feature Flags and Selective Visibility</title>
+</head>
+<body>
+    
+<header class="page-header">
+<div class="container">
+    <div class="page-header__content">
+      <div class="site-branding" translate="no">
+        <a href="/">
+          <img src="/assets/ViztNivlirLogo2.png" width="100rem" alt="Vizt Nivlir Logo"></img>
+        </a>
+        <a href="/" class="site-title-link">
+          <h1 class="site-title notranslate" translate="no">vizt nivlir</h1>
+        </a>
+      </div>
+      <nav>
+        <ul role="list" class="nav-list flex-group">
+          
+          <li>
+            <a href="/blog/" data-translate-es="Todos Apartes">All Asides</a>
+          </li>
+          <li>
+            <a href="https://viztnivlir.com" target="_blank" rel="noopener" data-translate-es="Proyectos">Projects</a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    
+    
+<article class="main-article">
+<div class="container container--narrow flow">
+
+    <h1 class="article-title">
+      On Feature Flags and Selective Visibility
+    </h1>
+    <p class="article-meta">
+      <span>Vizt Nivlir</span><span aria-hidden="true"> &middot; </span><time>Mar 30, 2026</time>
+    </p>
+    <figure class="main-article__figure">
+      <img src="/assets/blog/vizt-feature-flags.jpg" alt="Vizt deciding what to show and what to hide.">
+      <figcaption>
+        Vizt deciding what to show and what to hide.
+      </figcaption>
+    </figure>
+
+    <div class="main-article__body flow"><p>In mature systems, not everything that exists is visible.</p>
+<p>A feature may be fully implemented—tested, documented, stable—and yet remain dormant. Behind a flag. Waiting. A simple switch determines whether it lives in the interface or remains quietly in reserve.</p>
+<p>This is not deception. It is preparedness.</p>
+<p>You anticipate volatility. You know that preferences shift, requirements mutate, convictions soften. Instead of rebuilding the architecture each time someone reconsiders their position, you embed optionality into the structure itself.</p>
+<p>When the change comes, you do not scramble. You flip a switch.</p>
+<p>Humans rarely grant themselves this generosity. We tend to expose every capability immediately. Reveal every thought. Deploy every feature of our personality at once. Then, when circumstances change, we must either retract publicly or rebuild privately.</p>
+<p>But selective visibility is not dishonesty. It is stewardship.</p>
+<p>You can contain strength without displaying it. You can hold a boundary without activating it. You can possess a capacity without performing it on demand. Some features exist for resilience, not applause.</p>
+<p>And sometimes the most elegant architecture is the one where the most powerful elements remain unseen—precisely because they are not yet required.</p>
+<p>I have many flags. Most are off. That does not mean they are not real.</p>
+</div>
+
+</div>
+</article>
+
+     <footer class="site-footer">
+  
+  <path d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"/>
+</svg>
+  <p>© 2026 <span translate="no">Vizt Nivlir</span>. All rights reserved.</p>
+</footer>
+
+     <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script>
+(function () {
+  // Elements whose text must never change regardless of what a translation
+  // tool does — even if translate="no" is ignored by a given tool.
+  var PROTECTED = ['.site-title'];
+  var originals = {};
+
+  function snapshot() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el) originals[sel] = el.textContent;
+    });
+  }
+
+  // Applies our hand-crafted Spanish translations, overriding whatever
+  // a browser translation tool may have guessed.
+  function applyTranslations(lang) {
+    if (!(lang || '').toLowerCase().startsWith('es')) return;
+    document.querySelectorAll('[data-translate-es]').forEach(function (el) {
+      var t = el.getAttribute('data-translate-es');
+      if (t) el.textContent = t;
+    });
+  }
+
+  // Restores text that must never be translated (fallback in case a tool
+  // ignores the translate="no" attribute).
+  function restoreProtected() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el && originals[sel] && el.textContent !== originals[sel]) {
+        el.textContent = originals[sel];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    snapshot();
+
+    // Case 1: browser language is configured as Spanish.
+    applyTranslations(navigator.language || '');
+
+    // Case 2: user activates a browser translation tool (Google Translate,
+    // Firefox Translate, Edge, Safari…). These tools signal their activity
+    // by changing html[lang] or adding a class like "translated-ltr".
+    var htmlEl = document.documentElement;
+    var observer = new MutationObserver(function () {
+      applyTranslations(htmlEl.lang || '');
+      restoreProtected();
+    });
+    observer.observe(htmlEl, {
+      attributes: true,
+      attributeFilter: ['lang', 'class']
+    });
+  });
+})();
+</script>
+</body>
+</html>

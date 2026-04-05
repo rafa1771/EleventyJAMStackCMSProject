@@ -57,23 +57,129 @@
 </header>
     
     
+
+
+
+
+  
+  
+
+
 <section class="hero">
-  <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title" data-translate-es="Apartes">Asides</h1>
-        <p>This is not a blog in the usual sense.</p>
-        <p>It is a collection of notes, margins, and observations made while building things that are meant to work — interfaces, systems, small pieces of order.</p>
-        <p>Some entries begin as technical problems and end as reflections. Others do the opposite. Many are written while waiting for something to compile, deploy, or make sense.</p>
-        <p>Nothing here is optimized for scale. Everything here is written to be read.</p>
-        <p>You are welcome to browse. Linger if you like. These are asides, after all.</p>
-        
+  <div class="container hero__layout">
+      <div class="hero__copy">
+        <div class="hero__content flow">
+          <h1 class="section-title" data-translate-es="Apartes">Asides</h1>
+          <p>This is not a blog in the usual sense.</p>
+        </div>
+        <div class="hero__media hero__media--mobile">
+          
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            alt="Vizt at home"
+            class="hero__image"
+            data-hero-image>
+          <noscript>
+            <img src="/assets/blog/vizt_at_home_3.jpg" alt="Vizt at home" class="hero__image is-loaded">
+          </noscript>
+          
+        </div>
+        <div class="hero__body flow">
+          <p>It is a collection of notes, margins, and observations made while building things that are meant to work — interfaces, systems, small pieces of order.</p>
+          <p>Some entries begin as technical problems and end as reflections. Others do the opposite. Many are written while waiting for something to compile, deploy, or make sense.</p>
+          <p>Nothing here is optimized for scale. Everything here is written to be read.</p>
+          <p>You are welcome to browse. Linger if you like. These are asides, after all.</p>
+          
+        </div>
       </div>
-      <div>
-        <img src="/assets/blog/vizt_at_home_3.jpg" alt="Vizt at home" class="hero__image">
+      <div class="hero__media hero__media--desktop">
+        
+        <img
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+          alt="Vizt at home"
+          class="hero__image"
+          data-hero-image>
+        <noscript>
+          <img src="/assets/blog/vizt_at_home_3.jpg" alt="Vizt at home" class="hero__image is-loaded">
+        </noscript>
+        
       </div>
   </div>
 </section>
 
+
+<script id="hero-image-options" type="application/json">
+[{
+      "src": "/assets/blog/vizt_at_home_3.jpg",
+      "alt": "Vizt at home"
+    },{
+      "src": "/assets/blog/vizt-dandy-dilemma-with-horns.jpg",
+      "alt": "Vizt Nivlir"
+    },{
+      "src": "/assets/blog/vizt-in-dependency-hell.jpg",
+      "alt": "Vizt in dependency hell"
+    },{
+      "src": "/assets/blog/vizt-at-the-dentist-2.jpg",
+      "alt": "\"Open wide, Mr. Nivlir.\""
+    },{
+      "src": "/assets/blog/vizt-getting-a-late-night-request.jpg",
+      "alt": "A modest request, received during the sacred rite of evening ablutions."
+    },{
+      "src": "/assets/blog/vizt-trustless-system.jpg",
+      "alt": "Vizt contemplating a trustless system"
+    }]
+</script>
+
+<script>
+(function () {
+  var dataEl = document.getElementById('hero-image-options');
+  var heroImages = Array.prototype.slice.call(document.querySelectorAll('[data-hero-image]'));
+
+  if (!dataEl || !heroImages.length) return;
+
+  try {
+    var images = JSON.parse(dataEl.textContent).filter(function (item) {
+      return item && item.src;
+    });
+
+    if (!images.length) return;
+
+    var storedIndex = parseInt(sessionStorage.getItem('heroImageIndex') || '0', 10);
+    var currentIndex = Number.isFinite(storedIndex) ? storedIndex : 0;
+    var selected = images[currentIndex % images.length];
+
+    sessionStorage.setItem('heroImageIndex', String((currentIndex + 1) % images.length));
+
+    heroImages.forEach(function (img) {
+      img.classList.remove('is-loaded');
+    });
+
+    var preloader = new Image();
+
+    preloader.addEventListener('load', function handleLoad() {
+      heroImages.forEach(function (img) {
+        img.alt = selected.alt || img.alt;
+        img.src = selected.src;
+        img.classList.add('is-loaded');
+      });
+    }, { once: true });
+
+    preloader.addEventListener('error', function handleError() {
+      heroImages.forEach(function (img) {
+        img.alt = selected.alt || img.alt;
+        img.src = selected.src;
+        img.classList.add('is-loaded');
+      });
+    }, { once: true });
+
+    preloader.src = selected.src;
+  } catch (error) {
+    console.warn('Unable to choose the next hero image.', error);
+  }
+})();
+</script>
+
+ 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
     <h2 class="section-title text-center" data-translate-es="Retazos del espejo">From the Stack</h2>
