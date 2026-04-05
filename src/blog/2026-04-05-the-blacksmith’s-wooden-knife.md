@@ -24,8 +24,6 @@ The work I produce for others is deliberate. Structured. Considered. Typography 
 
 It is precise because it must be. But this—this is something else. This is the wooden knife. Not because I am incapable of making something sharper—but because sharpness, in this context, would be a concession.
 
-This website is not an oversight, but a refusal.
-
 There are no funnels here. No conversion strategies. No careful scaffolding of search intent. I do not round off every edge of thought, nor rearrange the furniture for discoverability. I do not explain every reference, or compress ideas for speed. If something asks to be read twice, I let it.
 
 This is not a showroom. It is a room. A quieter one. Slightly off to the side.
