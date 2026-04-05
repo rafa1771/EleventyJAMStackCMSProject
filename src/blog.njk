@@ -20,7 +20,7 @@ layout: base.njk
 <script>
 (function () {
   var POSTS_PER_PAGE = 10;
-  var SYSTEM_TAGS = ['post', 'post:', 'featured'];
+  var SYSTEM_TAGS = {{ site.silentTags | json | safe }};
 
   var list = document.getElementById('articles-list');
   var filterContainer = document.getElementById('tag-filters');
