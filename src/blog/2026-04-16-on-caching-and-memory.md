@@ -8,6 +8,7 @@ date: 2026-04-16T17:08:00.000+02:00
 tags:
   - post
   - architecture
+  - featured
 image: /assets/blog/vizt-cache-2.jpg
 imageAlt: To cache or not to cache?
 ---
