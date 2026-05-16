@@ -4,7 +4,7 @@ description: Vizt Nivlir reflects on his improbable devotion to flamenco—the
   structure of bulerías, the gravity of soleá, and the difficulty of remaining
   inconspicuous as a gazelle in a Sevillian bar.
 author: Vizt Nivlir
-date: 2026-05-16T16:26:00.000+02:00
+date: 2025-05-16T16:26:00.000+02:00
 tags:
   - post
   - listening
