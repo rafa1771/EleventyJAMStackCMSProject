@@ -8,7 +8,6 @@ date: 2026-04-16T17:08:00.000+02:00
 tags:
   - post
   - architecture
-  - social rituals
 image: /assets/blog/vizt-cache.jpg
 imageAlt: To cache or not to cache?
 ---
