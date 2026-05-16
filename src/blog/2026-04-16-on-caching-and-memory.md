@@ -1,5 +1,5 @@
 ---
-title: On Caching and Memory
+title: On Loading People from Cache
 description: Caching improves performance by remembering what was previously
   loaded. Vizt Nivlir reflects on the convenience—and distortion—of remembering
   too efficiently.
