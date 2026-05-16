@@ -8,7 +8,7 @@ date: 2026-04-16T17:08:00.000+02:00
 tags:
   - post
   - architecture
-image: /assets/blog/vizt-cache.jpg
+image: /assets/blog/vizt-cache-2.jpg
 imageAlt: To cache or not to cache?
 ---
 Caching is practical. It stores a version of something locally so it can be retrieved faster the next time it’s needed. No reprocessing. No fresh request. Just a copy—efficient and immediate.
