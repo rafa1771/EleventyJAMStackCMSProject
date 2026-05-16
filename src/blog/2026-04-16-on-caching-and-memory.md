@@ -27,4 +27,6 @@ There are moments when a hard refresh is necessary. A clearing of memory. An unc
 
 It is slower. But it is more honest.
 
-I try, when I can, not to load people from cache. Including myself.
+I try, when I can, not to load people from cache. 
+
+Including myself.
