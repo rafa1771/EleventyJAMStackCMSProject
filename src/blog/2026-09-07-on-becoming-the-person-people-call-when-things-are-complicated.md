@@ -7,6 +7,8 @@ author: Vizt Nivlir
 date: 2026-09-07T06:34:00.000+02:00
 tags:
   - post
+  - work
+  - architecture
 image: /assets/blog/vizt-meeting-clients.jpg
 imageAlt: One must speak to the humans.
 ---
