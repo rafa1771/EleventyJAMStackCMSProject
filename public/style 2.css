@@ -1,0 +1,717 @@
+:root {
+  --fs-300: 0.9375rem;
+  --fs-400: 1.0625rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.875rem;
+  --fs-700: 2rem;
+  --section-space: clamp(3rem, 8vh, 6rem);
+  --section-space-first: clamp(1.75rem, 5vh, 3.5rem);
+
+  --ff-body: "IBM Plex Sans", sans-serif;
+  --ff-heading: "IBM Plex Mono", monospace;
+  --ff-button: "DM Mono", monospace;
+
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --clr-primary-200: hsla(169, 70%, 95%, 1);
+  --clr-primary-300: hsla(169, 100%, 39%, 1);
+  --clr-primary-400: hsla(169, 100%, 26%, 1);
+  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-600: hsla(0, 0%, 48%, 1);
+
+  --clr-neutral-100: hsla(45, 29%, 97%, 1);
+  --clr-neutral-200: hsla(17, 15%, 91%, 1);
+  --clr-neutral-300: hsla(0, 0%, 50%, 1);
+  --clr-neutral-400: hsla(0, 0%, 40%, 1);
+  --clr-neutral-500: hsla(0, 0%, 60%, 1);
+  --clr-neutral-900: hsla(0, 0%, 12%, 1);
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2.25rem;
+    --fs-700: 3rem;
+  }
+}
+
+/* //////////////////////
+  RESET - source: https://piccalil.li/blog/a-modern-css-reset
+  /////////////////////// */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+.btn {
+  font-family: var(--ff-button);
+  font-weight: var(--fw-700);
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-900);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+strong {
+  font-weight: var(--fw-700);
+}
+
+section,
+.section {
+  padding: var(--section-space) 0;
+}
+
+/* //////////////////////
+  Utility Classes
+  /////////////////////// */
+
+/* select all direct childen of .flow
+   and add margin to the top for proper
+   spacing */
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 1.5em;
+  max-width: 72rem;
+}
+
+.container--narrow {
+  max-width: 65rem;
+}
+
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1em);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* typgraphy */
+
+.article-title,
+.section-title {
+  color: var(--clr-primary-500);
+}
+
+.article-title {
+  font-size: var(--fs-700);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+}
+
+/* //////////////////////
+  Header
+  /////////////////////// */
+
+.page-header {
+  padding: 1em 0;
+}
+
+.page-header + section,
+.page-header + .section {
+  padding-top: var(--section-space-first);
+}
+
+.site-branding {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns image and text vertically */
+  gap: 1rem; /* Optional spacing between logo and text */
+}
+
+.site-branding img {
+  display: block;
+  height: auto;
+  width: 4rem;
+}
+
+.site-branding .site-title {
+  margin: 0;
+  font-family: var(--ff-heading);
+  font-size: 4rem; /* Or your preferred size */
+  font-style: italic;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-weight: var(--fw-400);
+  color: var(--clr-primary-600); /* Or replace with desired color */
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.site-branding:hover .site-title:hover {
+  color: var(--clr-primary-500);
+  text-shadow: hsla(0, 0%, 40%, 1) 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.site-title-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.site-title-link:hover,
+.site-title-link:focus {
+  text-decoration: none;
+  color: var(--clr-primary-500);
+  transform: translateY(-2px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.page-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--clr-primary-600);
+  text-decoration: none;
+}
+
+.nav-list a:focus,
+.nav-list a:hover {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .container.hero__layout {
+    gap: 1.2rem;
+  }
+
+  .hero__content {
+    --flow-spacer: 0.65rem;
+  }
+
+  .hero__body {
+    --flow-spacer: 0.75rem;
+  }
+
+  .hero__copy {
+    gap: 0.5rem;
+  }
+
+  .page-header__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .site-branding {
+    max-width: none;
+    gap: 0.6rem; /* Optional spacing between logo and text */
+    justify-content: center;
+  }
+
+  .site-branding img {
+    width: 3rem;
+  }
+
+  .site-branding .site-title {
+    font-size: clamp(2.45rem, 9.6vw, 3.3rem); /* Or your preferred size */
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
+  }
+
+  .page-header nav {
+    width: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem; /* space between links */
+    line-height: 1.2; /* control line height */
+  }
+
+  .nav-list a {
+    display: inline-block;
+    padding-block: 0.2rem;
+  }
+
+  .page-header + section,
+  .page-header + .section {
+    padding-top: clamp(1.25rem, 4vh, 2rem);
+  }
+}
+
+/* //////////////////////
+  Footer
+  /////////////////////// */
+
+.site-footer {
+  --logo-color: currentColor;
+  padding: 2em 0;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-500);
+  text-align: center;
+}
+
+/* //////////////////////
+  Homepage
+  /////////////////////// */
+
+.hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 3em;
+}
+
+.hero__copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero__body {
+  --flow-spacer: 1em;
+}
+
+.hero__media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--clr-neutral-200);
+}
+
+.hero__media--desktop {
+  display: none;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.hero__image.is-loaded {
+  opacity: 1;
+}
+
+@media (min-width: 45em) {
+  .hero__layout {
+    grid-template-columns: 1fr 0.6fr;
+    gap: 3em;
+  }
+
+  .hero__copy {
+    grid-column: 1;
+    gap: 1rem;
+  }
+
+  .hero__media {
+    grid-column: 2;
+  }
+
+  .hero__media--mobile {
+    display: none;
+  }
+
+  .hero__media--desktop {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image {
+    transition: none;
+  }
+}
+
+.featured-articles {
+  background-color: var(--clr-primary-200);
+  border-top: 1px solid var(--clr-primary-300);
+}
+
+.articles__list {
+  --flow-spacer: 3rem;
+  margin: 2.5rem 0;
+}
+
+/* //////////////////////
+  Individual article page
+  /////////////////////// */
+
+.main-article {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.main-article__figure figcaption {
+  margin: 1rem 0;
+  font-size: var(--fs-300);
+  opacity: 0.9;
+}
+
+/* //////////////////////
+  Article snippets
+  /////////////////////// */
+
+.snippet {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    "image"
+    "title"
+    "meta"
+    "body"
+    "button";
+}
+
+.snippet__image {
+  grid-area: image;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.snippet__title {
+  grid-area: title;
+}
+.snippet__meta {
+  grid-area: meta;
+  color: var(--clr-neutral-300);
+}
+
+.snippet__meta span {
+  color: var(--clr-neutral-900);
+}
+
+.snippet .btn {
+  grid-area: button;
+}
+
+.snippet__title {
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-500);
+}
+
+.snippet__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.snippet__title a:hover,
+.snippet__title a:focus {
+  color: var(--clr-primary-500);
+}
+
+@media (min-width: 45em) {
+  .snippet {
+    grid-template-areas:
+      "title image"
+      "meta image"
+      "body image"
+      "button image";
+    grid-column-gap: 4em;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: min-content min-content min-content 1fr;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn:focus {
+  outline: 0.125em solid var(--clr-primary-400);
+  outline-offset: 0.25em;
+}
+
+.btn--primary {
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-primary-400);
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+  transform: translateY(-2px);
+}
+
+.btn--neutral {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-neutral-900);
+}
+
+.btn--neutral:hover,
+.btn--neutral:focus {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+/* //////////////////////
+  Tag Filters
+  /////////////////////// */
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1.75rem 0 0;
+}
+
+.tag-filter-btn {
+  cursor: pointer;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  padding: 0.35em 1.1em;
+  border-radius: 2em;
+  border: 2px solid var(--clr-primary-400);
+  background: transparent;
+  color: var(--clr-primary-400);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tag-filter-btn:hover,
+.tag-filter-btn:focus {
+  background: var(--clr-primary-200);
+  outline: none;
+}
+
+.tag-filter-btn--active {
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.tag-filter-btn--active:hover,
+.tag-filter-btn--active:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+}
+
+/* Override top margin on the asides-page article list
+   so it sits closer to the tag filters */
+#articles-list.articles__list {
+  margin-top: 2rem;
+}
+
+/* //////////////////////
+  Pagination
+  /////////////////////// */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em;
+  justify-content: center;
+  margin: 3rem 0 1rem;
+}
+
+.pagination__btn {
+  cursor: pointer;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  min-width: 2.5em;
+  padding: 0.35em 0.8em;
+  border-radius: 0.25em;
+  border: 2px solid var(--clr-neutral-200);
+  background: transparent;
+  color: var(--clr-neutral-900);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination__btn:hover:not(:disabled),
+.pagination__btn:focus:not(:disabled) {
+  background: var(--clr-primary-200);
+  border-color: var(--clr-primary-400);
+  outline: none;
+}
+
+.pagination__btn--active {
+  background: var(--clr-primary-400);
+  border-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.pagination__btn--active:hover,
+.pagination__btn--active:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* //////////////////////
+  Article page — meta + body
+  /////////////////////// */
+
+.article-meta {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-300);
+  font-family: var(--ff-button);
+  letter-spacing: 0.02em;
+}
+
+.article-meta time {
+  color: var(--clr-neutral-400);
+}
+
+.main-article__body {
+  line-height: 1.75;
+  --flow-spacer: 1.25em;
+}
+
+/* //////////////////////
+  Article list — separators + alternating layout
+  /////////////////////// */
+
+/* On the filtered/paginated asides page the first *visible* item may not
+   be the first DOM child, so suppress the flow margin it would inherit. */
+.articles__list > li.is-first-visible {
+  margin-top: 0;
+}
+
+/* Alternating image position for visual rhythm on desktop */
+/* @media (min-width: 45em) {
+  .articles__list > li:nth-child(even) .snippet {
+    grid-template-areas:
+      "image title"
+      "image meta"
+      "image body"
+      "image button";
+    grid-template-columns: 38% 1fr;
+  }
+} */
