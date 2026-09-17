@@ -62,12 +62,12 @@ This generates static files in the `public/` directory.
 │   ├── _includes/        # Nunjucks templates and partials
 │   ├── admin/            # Decap CMS configuration
 │   ├── assets/           # Static assets (copied to output)
-│   ├── blog/             # Blog post markdown files
+│   ├── asides/           # Post markdown files
 │   ├── index.njk         # Homepage
-│   ├── blog.njk          # Blog listing page
+│   ├── asides.njk        # Post listing page
 │   └── style.css         # Global styles
 ├── public/               # Generated output (do not edit)
-│   └── assets/blog/      # Uploaded images from CMS
+│   └── assets/asides/    # Uploaded images from CMS
 ├── .eleventy.js          # Eleventy configuration
 └── package.json          # Dependencies and scripts
 ```
@@ -133,14 +133,14 @@ Navigate to `https://your-site.netlify.app/admin/` and log in with your Netlify 
 5. Click "Publish" to save
 
 **Manually:**
-Create a new markdown file in `src/blog/` with this frontmatter:
+Create a new markdown file in `src/asides/` with this frontmatter:
 ```yaml
 ---
 title: Your Post Title
 author: Your Name
 date: 2025-01-31
 tags: ["post", "featured"]
-image: /assets/blog/your-image.jpg
+image: /assets/asides/your-image.jpg
 imageAlt: Image description
 description: Brief post description
 ---
@@ -150,7 +150,7 @@ Your post content here...
 
 ### Managing Images
 
-Images uploaded through the CMS are stored in `public/assets/blog/`. You can also manually add images to this directory and reference them in your posts.
+Images uploaded through the CMS are stored in `public/assets/asides/`. You can also manually add images to this directory and reference them in your posts.
 
 ## License
 

@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "public/assets/blog"
-public_folder: "/assets/blog"
+media_folder: "public/assets/asides"
+public_folder: "/assets/asides"
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blog"
+  - name: "asides"
+    label: "Asides"
+    folder: "src/asides"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

@@ -614,7 +614,7 @@ section,
   border-color: var(--clr-primary-500);
 }
 
-/* Override top margin on the blog-page article list
+/* Override top margin on the asides-page article list
    so it sits closer to the tag filters */
 #articles-list.articles__list {
   margin-top: 2rem;
@@ -698,7 +698,7 @@ section,
   Article list — separators + alternating layout
   /////////////////////// */
 
-/* On the filtered/paginated blog page the first *visible* item may not
+/* On the filtered/paginated asides page the first *visible* item may not
    be the first DOM child, so suppress the flow margin it would inherit. */
 .articles__list > li.is-first-visible {
   margin-top: 0;
