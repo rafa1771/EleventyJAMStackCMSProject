@@ -3,7 +3,7 @@ title: On Conversations That Only Happen in Transit
 description: Vizt Nivlir reflects on the unexpected intimacy of conversations
   that occur in taxis—suspended between departure and arrival.
 author: Vizt Nivlir
-date: 2026-07-14T20:49:00.000+02:00
+date: 2026-07-17T20:49:00.000+02:00
 tags:
   - post
   - interspecies
