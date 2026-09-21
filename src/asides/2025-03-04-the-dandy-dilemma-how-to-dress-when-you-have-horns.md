@@ -10,7 +10,7 @@ tags:
   - post
   - elegance
   - hero image
-image: /assets/asides/vizt-dandy-dilemma-with-horns.jpg
+image: /assets/asides/vizt-lost-in-thought.jpeg
 imageAlt: Vizt Nivlir
 ---
 
