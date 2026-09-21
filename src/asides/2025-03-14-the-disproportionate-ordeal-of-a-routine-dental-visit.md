@@ -8,6 +8,7 @@ date: 2025-03-14T02:33:00.000Z
 tags:
   - post
   - social rituals
+  - perimeter
   - hero image
 image: /assets/asides/vizt-at-the-dentist-2.jpg
 imageAlt: '"Open wide, Mr. Nivlir."'
