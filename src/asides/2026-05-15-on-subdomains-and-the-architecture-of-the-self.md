@@ -15,19 +15,19 @@ It is considered good practice to keep things organized. Clear hierarchies. Logi
 
 Each one contained. Predictable. Useful.
 
-help.example.com
+*help.example.com*
 
-shop.example.com
+*shop.example.com*
 
-blog.example.com
+*blog.example.com*
 
 But what fascinates me is not their utility—it is their psychology.
 
 A subdomain is not merely a section. It is a room with a different temperature. A different posture. You do not enter it by accident. You choose to step slightly to the side.
 
-viztnivlir.com is the front room. It is where I stand upright. Where the lines are clean and the lighting intentional. It is coherent, because coherence is part of the offering.
+*viztnivlir.com* is the front room. It is where I stand upright. Where the lines are clean and the lighting intentional. It is coherent, because coherence is part of the offering.
 
-asides.viztnivlir.com is not a section. It is a door half-closed.
+*asides.viztnivlir.com* is not a section. It is a door half-closed.
 
 It is the room where one speaks without projecting. Where sentences do not need to resolve into value propositions. Where the self is not presented, but examined.
 
