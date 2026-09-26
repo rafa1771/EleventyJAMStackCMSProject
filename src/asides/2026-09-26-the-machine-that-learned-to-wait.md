@@ -1,6 +1,9 @@
 ---
 title: The Machine That Learned to Wait
-description: This is, by some margin, the longest Aside I have written. It concerns an AI system that began by reading warehouse emails and gradually acquired tasks, authority, safeguards, colleagues, a printer, and several reasons to become less confident.
+description: This is, by some margin, the longest Aside I have written. It
+  concerns an AI system that began by reading warehouse emails and gradually
+  acquired tasks, authority, safeguards, colleagues, a printer, and several
+  reasons to become less confident.
 author: Vizt Nivlir
 date: 2026-09-26T18:56:00.000+02:00
 tags:
@@ -9,7 +12,6 @@ tags:
 image: /assets/asides/vizt-warehouse-automation-2.jpg
 imageAlt: Eventually, waiting became part of the architecture.
 ---
-
 A note before beginning: this is not, strictly speaking, an aside.
 
 It is rather long.
@@ -22,7 +24,7 @@ It has taken eight generations of the system to discover what “next” means.
 
 There is a particular kind of optimism involved in teaching a machine to read email.
 
-Email, after all, gives the appearance of structure. There is a sender. There is a subject. There is a body. Sometimes there is an attachment. One might reasonably imagine that the contents could therefore be sorted into similarly tidy categories: _Where is my order? Cancel this shipment. Change this address. Please print this. The truck will arrive at three._
+Email, after all, gives the appearance of structure. There is a sender. There is a subject. There is a body. Sometimes there is an attachment. One might reasonably imagine that the contents could therefore be sorted into similarly tidy categories: *Where is my order? Cancel this shipment. Change this address. Please print this. The truck will arrive at three.*
 
 This is roughly where the system began.
 
@@ -44,7 +46,7 @@ There were machine-learning models. There were training datasets. There were app
 
 This was useful.
 
-It was also the beginning of a long education in the distinction between _understanding a sentence_ and _being trusted with a warehouse_.
+It was also the beginning of a long education in the distinction between *understanding a sentence* and *being trusted with a warehouse*.
 
 The second generation replaced much of this machinery with language models. The third connected the system to the outside world: email, the warehouse-management system, notifications, identity checks.
 
@@ -104,7 +106,7 @@ This sounds modest. It was, in fact, a fairly substantial change.
 
 Suppose a customer writes:
 
-_Please cancel order 1234567._
+*Please cancel order 1234567.*
 
 An ordinary automation system might recognize the request and cancel the order.
 
@@ -114,7 +116,7 @@ It creates a **task object**.
 
 The task object says, in effect:
 
-_I believe this customer wants this order cancelled. Here is the order. Here is the action I propose. Here is the risk involved. Here is what would happen if someone permits me to continue._
+*I believe this customer wants this order cancelled. Here is the order. Here is the action I propose. Here is the risk involved. Here is what would happen if someone permits me to continue.*
 
 Then it asks a human.
 
@@ -204,17 +206,13 @@ The first question was obvious:
 
 **How accurate is the system when humans are asked to judge its decisions?**
 
-This required measurements.
-
-The measurements existed.
+This required measurements. The measurements existed.
 
 Unfortunately, some of them were wrong.
 
 The weekly report was describing an action that had been approved by a human and successfully executed as though it were still waiting for someone to do something.
 
-The action had happened.
-
-The reporting system did not know that it had happened.
+The action had happened. The reporting system did not know that it had happened.
 
 This was awkward because those same reports were intended to determine whether the system was ready to operate with less supervision.
 
@@ -234,9 +232,7 @@ That decision may be more important than several features that did.
 
 ## VI. The Emails That Disappeared Without Technically Disappearing
 
-The next revision went looking for similar problems.
-
-It found them.
+The next revision went looking for similar problems. It found them.
 
 A customer sent a cancellation request.
 
@@ -256,9 +252,7 @@ This is the more dangerous class of failure.
 
 A crash is impolite but informative.
 
-Silence is composed.
-
-Sometimes excessively so.
+Silence is composed. Sometimes excessively so.
 
 One guard designed to protect email processing could itself crash the email it was protecting. Dispatcher refusals were printed to the server console and then vanished rather than becoming durable records. A human decision could be received and then discarded without telling the person who made it. Two pieces of identity logic compared the human-readable contents of an email's `From` header with a bare email address and concluded, with admirable consistency, that legitimate people were not themselves.
 
@@ -322,9 +316,7 @@ But organizations are largely composed of small work.
 
 If the approval step does not fit naturally enough into the existing flow of attention, the evidence accumulates slowly. That does not necessarily tell us that the people are resistant, nor that the technology has failed. It tells us that a technically sound control can still have an organizational cost.
 
-The system therefore needed another mechanism, though a deliberately modest one:
-
-a weekly progress report.
+The system therefore needed another mechanism, though a deliberately modest one: a weekly progress report.
 
 It records how many decisions have been made, how many eligible requests remain without decisions, and how much evidence has accumulated toward the next stage.
 
@@ -350,9 +342,7 @@ That boundary has become one of the more interesting parts of the project.
 
 The present system has also become unusually interested in ownership.
 
-Not database ownership.
-
-Human ownership.
+Not database ownership. Human ownership.
 
 Every customer may have an assigned representative. Some have more than one. A representative may be out of office. Another person may cover for them. Unowned mail can enter a rotation. Monitoring addresses may receive copies without becoming responsible for the work.
 
@@ -478,6 +468,8 @@ The harder questions concern where authority should live, how responsibility sho
 
 That last point matters.
 
+I make agentic systems for human organizations. Not the other way around.
+
 Good automation should not require people to behave like components in its architecture.
 
 The architecture should have enough humility to accommodate the people already doing the work.
@@ -486,4 +478,6 @@ And so the next version can wait.
 
 Not because the technology has nothing more to do, nor because the organization has failed to catch up with it, but because the evidence is not yet complete.
 
-There are worse reasons to wait.
+For now, waiting is the correct action. Knowing when it is no longer necessary will be the next test.\
+\
+Restraint, it turns out, is also a form of competence.
