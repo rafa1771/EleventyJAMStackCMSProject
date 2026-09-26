@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of quiet digressions, technical oddities, and creative musings from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
+    <meta property="og:title" content="Vizt Nivlir – Asides">
+    <meta property="og:description" content="Notes, fragments, and developer digressions from Vizt Nivlir — web developer, copywriter, and gazelle-at-large.">
+    <meta property="og:image" content="/assets/ViztNivlirLogo2.png">
+    <meta property="og:url" content="https://asides.viztnivlir.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Vizt Nivlir" />
+    <link rel="manifest" href="/assets/site.webmanifest" />    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <title>The Machine That Learned to Wait</title>
+</head>
+<body>
+    
+<header class="page-header">
+<div class="container">
+    <div class="page-header__content">
+      <div class="site-branding" translate="no">
+        <a href="/">
+          <img src="/assets/ViztNivlirLogo2.png" width="100rem" alt="Vizt Nivlir Logo"></img>
+        </a>
+        <a href="/" class="site-title-link">
+          <h1 class="site-title notranslate" translate="no">vizt nivlir</h1>
+        </a>
+      </div>
+      <nav>
+        <ul role="list" class="nav-list flex-group">
+          
+          <li>
+            <a href="/asides/" data-translate-es="Todos Apartes">All Asides</a>
+          </li>
+          <li>
+            <a href="https://viztnivlir.com" target="_blank" rel="noopener" data-translate-es="Proyectos">Projects</a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    
+    
+<article class="main-article">
+<div class="container container--narrow flow">
+
+    <h1 class="article-title">
+      The Machine That Learned to Wait
+    </h1>
+    <p class="article-meta">
+      <span>Vizt Nivlir</span><span aria-hidden="true"> &middot; </span><time>Sep 26, 2026</time>
+    </p>
+    <figure class="main-article__figure">
+      <img src="/assets/asides/vizt-warehouse-automation-2.jpg" alt="Eventually, waiting became part of the architecture.">
+      <figcaption>
+        Eventually, waiting became part of the architecture.
+      </figcaption>
+    </figure>
+
+    <div class="main-article__body flow"><p>A note before beginning: this is not, strictly speaking, an aside.</p>
+<p>It is rather long.</p>
+<p>Most Asides can be read over coffee. This one may require the coffee and whatever follows it. I considered dividing it into several pieces, but that would make the story tidier than the thing itself, and tidiness is already one of the problems we shall encounter.</p>
+<p>For some time, I have been working on an AI system for a logistics operation. Its purpose sounds straightforward: read incoming customer email, understand what is being requested, find the relevant operational information, and help the people responsible for deciding what happens next.</p>
+<p>It has taken eight generations of the system to discover what “next” means.</p>
+<p>There is a particular kind of optimism involved in teaching a machine to read email.</p>
+<p>Email, after all, gives the appearance of structure. There is a sender. There is a subject. There is a body. Sometimes there is an attachment. One might reasonably imagine that the contents could therefore be sorted into similarly tidy categories: <em>Where is my order? Cancel this shipment. Change this address. Please print this. The truck will arrive at three.</em></p>
+<p>This is roughly where the system began.</p>
+<p>The difficulty was that human beings had been using email for some time before it arrived, and had developed their own conventions.</p>
+<p>They forward old messages without explanation. They reply to one subject while discussing another order. They call purchase orders “orders,” warehouse orders “POs,” containers “loads,” and occasionally identify something only as “this.” They send a spreadsheet and write “see attached.” Freight forwarders discuss several customers in the same thread. A five-digit number might be an order reference, unless it is a ZIP code. Someone writes “release” and may mean release an order, release freight, release a container, or simply that something has been released already.</p>
+<p>The machine entered this environment with confidence.</p>
+<p>We have since been working on the confidence.</p>
+<h2>I. In the Beginning, There Were Categories</h2>
+<p>The first version was comparatively innocent.</p>
+<p>It learned to classify messages. A customer email arrived; the system attempted to decide what sort of email it was. It extracted order numbers and other useful details and placed the message into a category.</p>
+<p>There were machine-learning models. There were training datasets. There were approximately ten gigabytes of model files. Considerable computational apparatus was assembled so that a computer could eventually announce that an email saying “where is order 1234567?” was probably a status request.</p>
+<p>This was useful.</p>
+<p>It was also the beginning of a long education in the distinction between <em>understanding a sentence</em> and <em>being trusted with a warehouse</em>.</p>
+<p>The second generation replaced much of this machinery with language models. The third connected the system to the outside world: email, the warehouse-management system, notifications, identity checks.</p>
+<p>By the fourth, it had begun to acquire something resembling judgment.</p>
+<p>Not judgment in the philosophical sense. We should remain composed.</p>
+<p>It learned, for example, that not every email deserved the expense and uncertainty of an AI model. Automated notifications were automated notifications. Internal company mail was internal company mail. Warehouse-system alerts could be recognized by ordinary rules.</p>
+<p>The clever system therefore became clever enough to know when cleverness was unnecessary.</p>
+<p>This remains one of its better qualities.</p>
+<h2>II. The Assistant Acquires a Name</h2>
+<p>By the fifth generation, the system had acquired a name and its own email address.</p>
+<p>Staff could write to it and ask about an order. It could consult the warehouse-management system and return a structured answer.</p>
+<p>This changed the nature of the project.</p>
+<p>The system was no longer merely sorting correspondence in the background. It was becoming an operational participant.</p>
+<p>A limited one, certainly. It could look. It could explain. It could report.</p>
+<p>It could not yet be trusted to wander through the warehouse systems making decisions on its own.</p>
+<p>There are moments in software development when this distinction appears excessively cautious.</p>
+<p>Later, they tend to be remembered as the sensible period.</p>
+<p>The sixth generation made its world more complicated. One email could contain several requests, so the system learned to split messages into separate intentions. Different AI models could be used to classify them. Multiple classifications could vote. Another model could veto the result when the others disagreed.</p>
+<p>An oversight agent watched from the side.</p>
+<p>The architecture was beginning to resemble a small civil service.</p>
+<p>This was not entirely accidental.</p>
+<p>The underlying problem was becoming clear: an AI model could be remarkably good at understanding language and still be an inappropriate place to put authority.</p>
+<p>So authority began moving elsewhere.</p>
+<p>Rules determined whether the sender was known. Rules determined whether an order number was valid. Rules determined whether the system was permitted to respond. Rules determined whether customer information could safely be shown. Rules determined whether an action could proceed.</p>
+<p>The AI interpreted.</p>
+<p>The system decided what interpretation was allowed to mean.</p>
+<p>That distinction became the architecture.</p>
+<h2>III. The Period of Restraint</h2>
+<p>The seventh generation was when the system learned to propose rather than perform.</p>
+<p>This sounds modest. It was, in fact, a fairly substantial change.</p>
+<p>Suppose a customer writes:</p>
+<p><em>Please cancel order 1234567.</em></p>
+<p>An ordinary automation system might recognize the request and cancel the order.</p>
+<p>Ours does not.</p>
+<p>It creates a <strong>task object</strong>.</p>
+<p>The task object says, in effect:</p>
+<p><em>I believe this customer wants this order cancelled. Here is the order. Here is the action I propose. Here is the risk involved. Here is what would happen if someone permits me to continue.</em></p>
+<p>Then it asks a human.</p>
+<p>The relevant customer-service representative receives an approval request. She may accept it, reject it, or decide that she will handle the matter herself.</p>
+<p>Only after approval does the proposed action approach the dispatcher.</p>
+<p>And the dispatcher is not sentimental.</p>
+<p>It checks whether the action has already happened. It checks whether approval exists. It checks whether the proposed action contains everything required to execute it. It checks whether the action is permitted. It checks whether execution is enabled at all.</p>
+<p>Later, another validation layer was added immediately before execution. It asks the warehouse system again whether reality is still the reality on which the approval was based.</p>
+<p>Perhaps the order has shipped in the meantime.</p>
+<p>Perhaps someone else cancelled it.</p>
+<p>Perhaps the task is now too old to be trusted.</p>
+<p>The system then declines to act.</p>
+<p>This is not failure.</p>
+<p>It is one of the central accomplishments of the project.</p>
+<p>A system capable of action must also be capable of discovering, at the final moment, that action has become inappropriate.</p>
+<p>Humans have traditionally called this judgment. It seemed reasonable not to automate it carelessly.</p>
+<h2>IV. Then the Warehouse Became More Specific</h2>
+<p>The system gradually learned that warehouses contain rather more than orders.</p>
+<p>There are returns. Inventory adjustments. Shipping-method changes. Address changes. Bills of lading. Advance shipping notices. Packing lists. Commercial invoices. Containers. Freight appointments. Receiving discrepancies.</p>
+<p>There are also freight forwarders and carriers who may legitimately discuss several customers.</p>
+<p>This presented an interesting problem.</p>
+<p>Previously, knowing the sender often helped determine the customer.</p>
+<p>But a freight forwarder may represent Customer A on Monday morning and Customer B by lunch. The sender is trustworthy; the customer association is not.</p>
+<p>So the system learned another distinction:</p>
+<p><strong>I know who you are</strong> is not the same statement as <strong>I know whose business you are discussing</strong>.</p>
+<p>Shared contacts are therefore recognized without automatically inheriting a customer account. The system looks instead for evidence inside the message: a validated order, an explicitly named account, or trustworthy context from the existing thread.</p>
+<p>Without enough evidence, it refrains from attaching customer data.</p>
+<p>This is a recurring motif in its education.</p>
+<p>It is increasingly allowed to know things.</p>
+<p>It is not therefore increasingly allowed to assume things.</p>
+<h2>V. The Small Matter of Reality</h2>
+<p>Eventually the system became sophisticated enough that the question of autonomy could no longer be postponed indefinitely.</p>
+<p>It could identify customers.</p>
+<p>It could understand requests.</p>
+<p>It could verify orders against the warehouse system.</p>
+<p>It could create structured tasks.</p>
+<p>It could request approval.</p>
+<p>It could execute approved actions.</p>
+<p>It could print warehouse documents through local computers.</p>
+<p>It could change an address and preserve enough information to restore the previous one.</p>
+<p>It could cancel an order and verify afterward that the cancellation had actually occurred.</p>
+<p>It could maintain an audit trail of what it thought, what a human decided, what it attempted, and what happened.</p>
+<p>The eighth generation was therefore intended to prepare the system for autonomy.</p>
+<p>This is where the story became more interesting.</p>
+<p>The first question was obvious:</p>
+<p><strong>How accurate is the system when humans are asked to judge its decisions?</strong></p>
+<p>This required measurements.</p>
+<p>The measurements existed.</p>
+<p>Unfortunately, some of them were wrong.</p>
+<p>The weekly report was describing an action that had been approved by a human and successfully executed as though it were still waiting for someone to do something.</p>
+<p>The action had happened.</p>
+<p>The reporting system did not know that it had happened.</p>
+<p>This was awkward because those same reports were intended to determine whether the system was ready to operate with less supervision.</p>
+<p>The system responsible for proving that the system was ready for automation was itself misreading the evidence.</p>
+<p>There is a certain architectural neatness to this kind of problem.</p>
+<p>One could even admire it, from a distance.</p>
+<p>The eighth generation therefore became less about adding autonomy and more about establishing whether the evidence supporting autonomy could be believed.</p>
+<p>The answer, initially, was no.</p>
+<p>So the project did not advance to autonomous operation.</p>
+<p>That decision may be more important than several features that did.</p>
+<h2>VI. The Emails That Disappeared Without Technically Disappearing</h2>
+<p>The next revision went looking for similar problems.</p>
+<p>It found them.</p>
+<p>A customer sent a cancellation request.</p>
+<p>A customer-service representative sent an approval decision.</p>
+<p>Legitimate customers passed through identity checks.</p>
+<p>In several cases, the system processed these events incorrectly and then quietly discarded the consequences.</p>
+<p>Nothing dramatic occurred.</p>
+<p>There was no spectacular crash screen. No database caught fire. No server emitted smoke.</p>
+<p>The messages simply failed to reach the next person or process that depended on them.</p>
+<p>This is the more dangerous class of failure.</p>
+<p>A crash is impolite but informative.</p>
+<p>Silence is composed.</p>
+<p>Sometimes excessively so.</p>
+<p>One guard designed to protect email processing could itself crash the email it was protecting. Dispatcher refusals were printed to the server console and then vanished rather than becoming durable records. A human decision could be received and then discarded without telling the person who made it. Two pieces of identity logic compared the human-readable contents of an email's <code>From</code> header with a bare email address and concluded, with admirable consistency, that legitimate people were not themselves.</p>
+<p>The system was not misunderstanding the customers.</p>
+<p>The surrounding machinery was misunderstanding the system.</p>
+<p>This distinction matters.</p>
+<p>It also explains the current character of the architecture.</p>
+<p>There are now explicit events for things that previously happened only in memory. Refusals are recorded. Approval decisions are recorded. Execution starts and completions are recorded. Failed actions are surfaced to humans instead of merely appearing in server output.</p>
+<p>Cancellation verification now works in both directions.</p>
+<p>Previously, a successful response from an external system might be treated too readily as evidence that the order had actually changed. Now the resulting state is checked.</p>
+<p>But the inverse matters too.</p>
+<p>A technical failure does not necessarily prove that nothing happened.</p>
+<p>Networks are capable of failing after the remote system has already performed the requested operation. So the system now verifies reality rather than treating the transport protocol as metaphysics.</p>
+<p>A success response is not necessarily success.</p>
+<p>An error response is not necessarily failure.</p>
+<p>The order itself gets the final word.</p>
+<h2>VII. The Organization Enters the Architecture</h2>
+<p>There remained another problem.</p>
+<p>This one could not be solved simply by correcting a function.</p>
+<p>The plan for controlled autonomy depends on an <strong>agreement corpus</strong>: a body of evidence showing how often the system's proposed decisions agree with the decisions made by the people who actually run the operation.</p>
+<p>For that corpus to exist, someone has to respond to the approval requests.</p>
+<p>ACCEPT.</p>
+<p>REJECT.</p>
+<p>MANUAL.</p>
+<p>On an architecture diagram, this is a very small step.</p>
+<p>In an operating company, it arrives among all the other small steps.</p>
+<p>There are customers waiting for answers, calls to return, shipments moving, exceptions requiring attention, existing procedures, familiar inbox habits, and the persistent tendency of urgent work to consume the merely important. An approval request that takes only a few seconds still has to compete for those seconds.</p>
+<p>This exposed another assumption in the design.</p>
+<p>I had treated human approval principally as a safety mechanism: the system proposes, the person decides, and the resulting decisions provide evidence about whether the system can eventually be trusted with more authority.</p>
+<p>Operationally, however, approval is also work.</p>
+<p>Small work, certainly.</p>
+<p>But organizations are largely composed of small work.</p>
+<p>If the approval step does not fit naturally enough into the existing flow of attention, the evidence accumulates slowly. That does not necessarily tell us that the people are resistant, nor that the technology has failed. It tells us that a technically sound control can still have an organizational cost.</p>
+<p>The system therefore needed another mechanism, though a deliberately modest one:</p>
+<p>a weekly progress report.</p>
+<p>It records how many decisions have been made, how many eligible requests remain without decisions, and how much evidence has accumulated toward the next stage.</p>
+<p>It is deliberately not a leaderboard.</p>
+<p>It does not scold.</p>
+<p>It does not gamify.</p>
+<p>It makes the dependency visible.</p>
+<p>If participation increases, the agreement corpus grows and the system can be evaluated.</p>
+<p>If it remains sparse, that too is useful information. It may mean the approval mechanism needs to fit the work differently. It may mean the value of the next stage has not yet justified the additional interaction. It may simply mean that the organization has more immediate things to do.</p>
+<p>Software is occasionally useful for discovering that the problem is not software.</p>
+<p>More precisely, it is useful for discovering that software has reached the boundary where the rest of the organization begins.</p>
+<p>That boundary has become one of the more interesting parts of the project.</p>
+<h2>VIII. Who, Precisely, Is Responsible?</h2>
+<p>The present system has also become unusually interested in ownership.</p>
+<p>Not database ownership.</p>
+<p>Human ownership.</p>
+<p>Every customer may have an assigned representative. Some have more than one. A representative may be out of office. Another person may cover for them. Unowned mail can enter a rotation. Monitoring addresses may receive copies without becoming responsible for the work.</p>
+<p>These distinctions sound administrative because they are administrative.</p>
+<p>They are also essential.</p>
+<p>A notification sent to five people is not necessarily owned by five people.</p>
+<p>It may, in practice, be owned by nobody.</p>
+<p>The current system therefore records not merely who received a message, but who is expected to act on it.</p>
+<p>If the normal representative is away, it looks for a named substitute.</p>
+<p>If there is no substitute, it assigns someone through a rotation.</p>
+<p>If that substitute approves an action, something more subtle happens: responsibility follows the decision.</p>
+<p>The substitute does not merely press ACCEPT and return the client to an absent colleague.</p>
+<p>The approval makes the consequence theirs.</p>
+<p>If the customer replies, the follow-up returns to the person who made the decision. When the normal representative returns, ownership can revert, but the history remains visible.</p>
+<p>This is not really email routing anymore.</p>
+<p>It is an attempt to represent organizational responsibility in software.</p>
+<p>The distinction is worth making because many automation projects begin by mapping processes and discover, somewhat later, that the processes were never the difficult part.</p>
+<p>The difficult part was always deciding who was responsible when the process stopped being ordinary.</p>
+<h2>IX. And There Is a Printer</h2>
+<p>We should mention the printer.</p>
+<p>Warehouses remain stubbornly physical places.</p>
+<p>At some point an intelligent email system that reasons about customer identity, confidence scores, approval provenance, idempotency, reversible actions and deterministic safety boundaries must print a piece of paper.</p>
+<p>The original printer integration assumed that the cloud service could push jobs directly into warehouse computers.</p>
+<p>The warehouse firewall had opinions about this.</p>
+<p>The design was reversed.</p>
+<p>Now local printer agents running on warehouse computers ask the central system whether there is anything waiting to be printed. If there is, they collect the job, print it, and report whether they succeeded.</p>
+<p>The cloud no longer attempts to enter the warehouse.</p>
+<p>The warehouse occasionally looks outside and asks whether there is paperwork.</p>
+<p>This arrangement is less ambitious.</p>
+<p>It also works.</p>
+<p>Architecture improves considerably once it stops taking rejection personally.</p>
+<h2>X. Where the System Stands Now</h2>
+<p>The current system is in its eighth generation.</p>
+<p>It can read operational email and distinguish many kinds of requests. It can recognize customers, shared freight contacts and internal staff. It can associate messages with the correct customer account when the evidence warrants it. It can look up live warehouse information. It can suppress sensitive information when identity or account alignment is uncertain.</p>
+<p>It can create structured tasks.</p>
+<p>It can ask humans to approve them.</p>
+<p>It can execute certain approved actions through a dispatcher surrounded by deterministic controls.</p>
+<p>It can cancel orders, send replies, change addresses, restore reversible changes, and place print jobs into a warehouse queue.</p>
+<p>It watches the state of the world again immediately before dangerous actions.</p>
+<p>It keeps records of decisions, approvals, refusals and executions.</p>
+<p>It knows that the person copied on an email is not necessarily the person responsible for it.</p>
+<p>It knows that a freight forwarder can be trustworthy without belonging to a customer.</p>
+<p>It knows that a valid order number does not prove the identity of the person asking about it.</p>
+<p>It knows that a server saying “success” does not prove success.</p>
+<p>It knows that a server saying “failure” does not prove failure.</p>
+<p>And, increasingly, it knows when it does not know enough.</p>
+<p>This is the point at which the project currently waits.</p>
+<p>The next generation is intended to begin controlled autonomous action.</p>
+<p>But it is not unlocked by another feature.</p>
+<p>It is unlocked by evidence.</p>
+<p>The system must accumulate enough real decisions to demonstrate that its judgment agrees with the people whose work it may eventually perform without asking them each time. The reporting must be trustworthy. The audit trail must be complete. Silent failures must be surfaced. Responsibility must remain visible. The controls must continue to work when the system is wrong, because eventually it will be.</p>
+<p>And the approval process itself must make sense inside the organization that is being asked to use it.</p>
+<p>Only then does autonomy become an engineering decision rather than an act of optimism.</p>
+<p>There is a temptation, when building AI systems, to measure progress by how much human involvement can be removed.</p>
+<p>This project has arrived at almost the opposite conclusion.</p>
+<p>The important question is not how quickly the human can be taken out of the loop.</p>
+<p>It is whether the loop has been understood well enough that we know <strong>which human judgment can safely be removed, which should be relocated, and which must remain exactly where it is</strong>.</p>
+<p>The system began as a classifier.</p>
+<p>Then it became an assistant.</p>
+<p>Then an operator awaiting permission.</p>
+<p>Somewhere along the way, the project itself changed.</p>
+<p>The difficult questions are no longer primarily about whether a language model can understand an email, or whether an API can cancel an order. Those are technical questions, and technical questions are often rather obliging: eventually they permit an answer.</p>
+<p>The harder questions concern where authority should live, how responsibility should move, what evidence is sufficient, and how a new system enters an organization without asking the organization to become a different one merely for the convenience of the software.</p>
+<p>That last point matters.</p>
+<p>Good automation should not require people to behave like components in its architecture.</p>
+<p>The architecture should have enough humility to accommodate the people already doing the work.</p>
+<p>And so the next version can wait.</p>
+<p>Not because the technology has nothing more to do, nor because the organization has failed to catch up with it, but because the evidence is not yet complete.</p>
+<p>There are worse reasons to wait.</p>
+</div>
+
+</div>
+</article>
+
+     <footer class="site-footer">
+  
+  <path d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"/>
+</svg>
+  <p>© 2026 <span translate="no">Vizt Nivlir</span>. All rights reserved.</p>
+</footer>
+
+     <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script>
+(function () {
+  // Elements whose text must never change regardless of what a translation
+  // tool does — even if translate="no" is ignored by a given tool.
+  var PROTECTED = ['.site-title'];
+  var originals = {};
+
+  function snapshot() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el) originals[sel] = el.textContent;
+    });
+  }
+
+  // Applies our hand-crafted Spanish translations, overriding whatever
+  // a browser translation tool may have guessed.
+  function applyTranslations(lang) {
+    if (!(lang || '').toLowerCase().startsWith('es')) return;
+    document.querySelectorAll('[data-translate-es]').forEach(function (el) {
+      var t = el.getAttribute('data-translate-es');
+      if (t) el.textContent = t;
+    });
+  }
+
+  // Restores text that must never be translated (fallback in case a tool
+  // ignores the translate="no" attribute).
+  function restoreProtected() {
+    PROTECTED.forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (el && originals[sel] && el.textContent !== originals[sel]) {
+        el.textContent = originals[sel];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    snapshot();
+
+    // Case 1: browser language is configured as Spanish.
+    applyTranslations(navigator.language || '');
+
+    // Case 2: user activates a browser translation tool (Google Translate,
+    // Firefox Translate, Edge, Safari…). These tools signal their activity
+    // by changing html[lang] or adding a class like "translated-ltr".
+    var htmlEl = document.documentElement;
+    var observer = new MutationObserver(function () {
+      applyTranslations(htmlEl.lang || '');
+      restoreProtected();
+    });
+    observer.observe(htmlEl, {
+      attributes: true,
+      attributeFilter: ['lang', 'class']
+    });
+  });
+})();
+</script>
+</body>
+</html>
